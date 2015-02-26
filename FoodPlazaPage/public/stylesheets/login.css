@@ -1,0 +1,18 @@
+
+
+.orderButton{
+
+width:350px;
+height:50px;
+position:relative;
+margin: auto;
+background-color:#FF6961;
+color:white;
+cursor:pointer;
+font-size: 25px; text-align: center;
+font-family: mySeccondFont;
+border-radius: 2px;
+line-height:55px;
+margin-top:100px;
+
+}

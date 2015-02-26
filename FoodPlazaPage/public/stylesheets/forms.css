@@ -1,0 +1,105 @@
+
+
+
+
+
+.popUpCloseButton {
+    
+    width:30px;
+    height:30px;//height:0px;
+    border-radius:30px;
+    border-color:white;
+    border-style:solid;
+    border-width:2px;
+    position:absolute;
+    opacity:0;
+    cursor:pointer;
+    color:white;
+    font-size:25px;
+    font-family:arial;
+    text-align:center;
+    line-height:30px;
+    left:20px;
+    bottom:20px;
+}
+
+.loginEnterButton {
+    
+    height:40px;//height:0px;
+    width:220px;
+    background-color:#FF6961;
+    cursor:pointer;
+    color:white;
+    opacity:0;
+    font-size: 20px; text-align: center;
+    font-family: mySeccondFont;
+    border-radius: 2px;
+    line-height:45px;
+    position:absolute;
+    left:240px;
+    //bottom:90px;
+    border-width:0px;
+    border:none;
+    margin-bottom:20px;
+}
+
+.loginFormText {
+    
+    width:180px;
+    height:25px;//height:0;
+    position:absolute;
+    left:80px;
+    background-color:rgba(255,255,255,0.0);
+    border-radius:4px;
+    opacity:0;
+    color:white;
+    font-family:mySeccondFont;
+    font-size:12px;
+    line-height:29px;
+    padding-left:20px;
+    border-style:none;
+}
+
+.loginFormTextField {
+    
+    width:220px;
+    height:25px;//height:0;
+    position:absolute;
+    left:240px;
+    background-color:rgba(255,255,255,0.2);
+    border-radius:4px;
+    opacity:0;
+    color:white;
+    //font-family:mySeccondFont;
+    font-family:arial;
+    font-size:13px;
+    line-height:25px;
+    //padding-left:20px;
+    border-width:0px;
+    border:none;
+    text-align:center;
+}
+
+
+#foodPlazaLogin {
+    text-align:center;background-image: url('/images/foodplazaL.jpg');
+    
+}
+
+#facebookLogin {
+    background-image: url('/images/facebookL.jpg');
+}
+
+#twitterLogin {
+    background-image: url('/images/twitterL.jpg');
+}
+
+#googleLogin {
+    background-image: url('/images/googleL.jpg');
+}
+
+
+
+
+
+

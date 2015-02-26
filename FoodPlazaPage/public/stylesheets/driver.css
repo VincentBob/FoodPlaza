@@ -1,0 +1,151 @@
+
+.contentDiv2 {
+    
+    position: relative;
+    width:100%;min-width:900px;
+    height: 600px;
+    z-index: 10;
+}
+
+.imageDiv {
+
+    height:100%;
+    width:300px;
+    background-color:clear;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position-y:bottom;
+}
+
+.textDiv {
+
+    height:50px;
+    width:500px;
+    margin-top:310px;
+    margin-right:77px;
+    position:relative;
+    float:right;
+    color:#282828;
+    font-family: mySeccondFont;
+    font-size: 25px; text-align: center;
+    line-height:55px;
+}
+
+.becomeDriverButton {
+    
+    width:350px;
+    height:50px;
+    margin-top:5px;
+    margin-right:150px;
+    position:relative;
+    background-color:#FF6961;
+    color:white;
+    cursor:pointer;
+    font-size: 25px; text-align: center;
+    font-family: mySeccondFont;
+    border-radius: 2px;
+    float:right;
+    line-height:55px;
+}
+
+.sliderDiv {
+
+    height:0px;
+    width:100%;min-width:900px;
+    //top:0;
+    //right:0;
+    position:absolute;
+    background-color:rgba(0,0,0,0.92);
+    z-index:50;
+}
+
+.sliderCloseButton {
+    
+    width:50px;
+    height:0px;
+    border-radius:50px;
+    border-color:white;
+    border-style:solid;
+    border-width:2px;
+    position:relative;
+    opacity:0;
+    cursor:pointer;
+    color:white;
+    font-size:35px;
+    font-family:arial;
+    text-align:center;
+    line-height:50px;
+    margin-left:80px;
+    margin-top:200px;
+}
+
+.sliderSubmitButton {
+    
+    height:0px;
+    width:250px;
+    background-color:#FF6961;
+    cursor:pointer;
+    color:white;
+    opacity:0;
+    font-size: 18px; text-align: center;
+    font-family: mySeccondFont;
+    border-radius: 2px;
+    line-height:45px;
+    position:absolute;
+    left:50%;
+    margin-left:-125px;
+    bottom:50px;
+}
+
+.formBlock {
+    width:680px;
+    height:10px;
+    //background-color:red;
+    margin:auto;
+    margin-top:300px;
+}
+
+.formItemBlock {
+    
+    width:auto;
+    height:auto;
+    float:left;
+    position:relative;
+    //background-color:blue;
+}
+
+.formText {
+    
+    width:120px;
+    height:0;
+    background-color:rgba(255,255,255,0.0);
+    position:relative;
+    margin-top:6px;
+    border-radius:4px;
+    opacity:0;
+    color:white;
+    font-family:mySeccondFont;
+    font-size:13px;
+    line-height:36px;
+    padding-left:20px;
+}
+
+.formItem {
+    
+    width:200px;
+    height:0;
+    background-color:rgba(255,255,255,0.1);
+    position:relative;
+    margin-top:6px;
+    border-radius:4px;
+    opacity:0;
+}
+
+
+
+
+
+
+
+
+

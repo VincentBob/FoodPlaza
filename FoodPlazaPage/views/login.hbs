@@ -1,0 +1,19 @@
+
+<head>
+    <script src="/javascripts/loginPage.js" type="text/javascript"></script>
+    <link rel='stylesheet' href='/stylesheets/login.css'/>
+</head>
+
+
+<div class="contentDiv1" style="background-color:white;">
+    <div class="centerDiv" style="background-color:white;">
+        <p style="margin-top: 40px;">
+        Welcome <strong>{{user.email}}{{user.userid}}</strong>
+            <a href="/signout" title="sign out">sign out</a>
+        </p>
+        <!--<div class="orderButton" onclick="orderQuery()" href="/order/{{id}}">Bestellen<div>-->
+        <div onclick="location.href='/order/{{user.userid}}';" class="orderButton">Bestellen</div>
+    </div>
+</div>
+
+

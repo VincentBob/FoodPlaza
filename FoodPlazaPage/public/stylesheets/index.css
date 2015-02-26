@@ -1,0 +1,359 @@
+
+* {
+    
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    
+    width: 100%;
+    height:250px;
+    z-index:100;
+    position:fixed;left:0px;top:0px;
+    background-image: url('/images/head.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.bigLogoHomeButton {
+    
+    width:160px;
+    height:190px;
+    top:20px;
+    position:absolute;
+    right:50%;
+    margin-right:-80px;
+    z-index:102;
+    cursor:pointer;
+}
+
+.smallLogo {
+    
+    width:80px;
+    height:26px;
+    float:left;
+    position:relative;
+    margin-left:1%;
+    top:12px;
+    background-image: url('/images/smallLogo.png');
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center center;
+    cursor:pointer;
+}
+
+.advertisement {
+    
+    width:100%;
+    height:20%;
+    position: absolute;right:0%;top:0%;
+    background-image: url('/images/advertismentbackLight.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.advertisementButton {
+    
+    width:125px;min-width:125px;
+    height:30px;
+    cursor:pointer;
+    font-size: 15px; text-align: center;
+    font-family: mySeccondFont;
+    border-radius: 2px;
+    float:right;
+    position:relative;
+    margin-right:1%;
+    margin-top:10px;
+    line-height:35px;
+}
+
+.advertisementT {
+    
+    height:30px;
+    line-height:36px;
+    font-size: 14px; text-align: center;
+    border-radius: 2px;
+    color:white;
+    font-family: mySeccondFont;
+    position:relative;
+    margin-top:10px;
+}
+
+.leftIconButton {
+    
+    width:150px;
+    height:30px;
+    cursor:pointer;
+    font-size: 15px; text-align: center;
+    font-family: mySeccondFont;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    position:absolute;
+    line-height:35px;
+    top:92px;
+}
+
+.subtitle {
+    
+    width:100%;min-width:900px;
+    height:45px;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:bottom;
+    background-image: url('/images/textOne.png');
+    position:absolute;
+    bottom:0;
+}
+
+.socialMenue {
+    
+    width:3vw;
+    height:auto;
+    position: fixed;left:0;top:50vh;
+    //background-color:white;
+    z-index: 100;
+    //border:3px solid #000000;
+    
+}
+
+.socialButton {
+    
+    width:50px;
+    height:50px;
+    background-color: transparent;
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position-x: left;
+    background-position-y: center;
+    cursor:pointer;
+    font-size: 1.4vw; text-align: center;
+    line-height: 24vh;
+    font-family: arial;
+}
+
+video#bgvid {
+    
+    position: fixed; right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: -100;
+    background-size: cover;
+}
+
+.videWindowDiv {
+    
+    position: relative;
+    width:100%;
+    //height: 86vh;min-height: 540px;
+    height: 100vh;min-height: 540px;
+    z-index: 10;
+    color:white;
+    font-family:mySeccondFont;
+    font-size:38px;
+    text-align:center;
+    line-height:28px;
+}
+
+.videWindowDiv span {
+    
+    font-size:18px;
+    line-height:-20px;
+}
+
+.sloganDiv {
+    
+    height:55px;
+    width:100%;
+    position:relative;
+    top:49%;
+    padding-top:24px;
+    opacity:0;
+}
+
+.registerButton {
+ 
+    height:50px;
+    width:270px;
+    background-color:#FF6961;
+    position:absolute;
+    right:50%;
+    margin-right:-135px;
+    top:59%;
+    border-radius:2px;
+    color:white;
+    font-size:26px;
+    text-align:center;
+    line-height:58px;
+    font-family:mySeccondFont;
+    cursor:pointer;
+    opacity:0;
+    margin-top:40px;
+}
+
+.loginFormDiv {
+    
+    width:600px;
+    height:0px;
+    background-color:rgba(0,0,0,0.9);
+    position:fixed;
+    left:50%;
+    margin-left:-300px;
+    top:34vh;
+    z-index:80;
+    border-radius:10px;
+}
+
+.signUpDiv {
+    
+    width:100%;
+    height:auto;
+    position:absolute;
+    top:50%;
+    margin-top:-100px;
+}
+
+.signUpButton {
+    
+    position:relative;
+    height:50px;
+    width:300px;
+    background-color:clear;
+    border-radius:2px;
+    cursor:pointer;
+    background-size:contain;
+    margin:auto;
+    background-repeat:no-repeat;
+    color:white;
+    font-size:15px;
+    text-align:left;
+    line-height:54px;
+    font-family:mySeccondFont;
+    //background-image: url('/images/smallLogo.png');
+    opacity:0;
+}
+
+.contentDiv1 {
+    
+    position: relative;
+    width:100%;min-width:900px;
+    height:400px;
+    z-index: 10;
+}
+
+.centerDiv {
+ 
+    width:900px;
+    height:100%;
+    margin:auto;
+}
+
+.details {
+    
+    height:100%;
+    width:290px;
+    position:relative;
+    float:left;
+}
+
+.iCon {
+    
+    height: 130px;
+    width: 130px;
+    margin: auto;
+    margin-top: 16%;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.iConText {
+    
+    width: 100%;
+    height: 42px;
+    position: relative;
+    color: #909090;
+    padding-top: 8%;
+    font-size: 20px;
+    text-align: center;
+    //font-family: arial;
+    font-family:  myFirstFont;
+    font-weight:bold;
+}
+
+.iConText span {
+    
+    color: #606060;
+    font-size: 26px;
+    line-height:3vw;
+    font-family:  mySeccondFont;
+}
+
+.thin {
+    
+    width:78%;height:1px;background-color:black;
+    top:2px;
+    position:relative;
+    margin:auto;
+}
+
+.iConText2 {
+    
+    width: 100%;
+    height: 42px;
+    position: relative;
+    color: #b0b0b0;
+    padding-top: 10%;
+    font-size: 20px;
+    text-align: center;
+    font-family: arial;
+    font-family:  myFirstFont;
+    font-weight:bold;
+}
+
+.iConText2 span {
+    
+    color: white;
+    font-size: 26px;
+    line-height:3vw;
+    font-family:  mySeccondFont;
+}
+
+.thin2 {
+    
+    width:78%;height:1px;background-color:white;
+    top:2px;
+    position:relative;
+    margin:auto;
+}
+
+.footer {
+    
+    height: 300px;
+    width: 100%;min-width:900px;
+    background-color: black;
+    position: relative;
+    bottom: 0;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url('/fonts/CODE Light.otf');
+}
+
+@font-face {
+    font-family: mySeccondFont;
+    //src: url('/fonts/ADAM.CG PRO.otf');
+    src: url('/fonts/pier.otf');
+}
+
+@font-face {
+    font-family: myThirdFont;
+    src: url('/fonts/BebasNeue Book.otf');
+}
+
+
+
+
