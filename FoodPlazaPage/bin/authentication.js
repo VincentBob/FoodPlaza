@@ -7,6 +7,15 @@ var bcrypt = require('bcrypt-nodejs');
 var Model = require('./model');
 var LocalStrategy = require('passport-local').Strategy;
 var passport = require('passport');
+var emailManagement = require('./emailManagement');
+var dataManagement = require('./dataManagement');
+
+
+
+
+
+
+// INDEX METHOD ------------------------------------------------------------------------------------------
 
 
 var getIndex = function(req, res, next) {
@@ -16,74 +25,85 @@ var getIndex = function(req, res, next) {
     
 };
 
+// -------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+// LOGIN METHODS -----------------------------------------------------------------------------------------
+
 
 var getLogin = function(req, res, next) {
     
     console.log('[+] req.isAuthenticated(): ');
-    console.log(req.isAuthenticated());
+    
+    var user = req.user;
+    if(user !== undefined) {
+        user = user.toJSON();
+    }
     
     if(!req.isAuthenticated()) {
+        
         console.log('  [X] not Authenticated');
         res.redirect('/');
-    } else {
+        
+    } else if(user.confirmed){
         
         console.log('  [V] Authenticated');
-        var user = req.user;
-        
-        if(user !== undefined) {
-            user = user.toJSON();
-        }
-        
-        console.log("[+] SEARCH FOR USER WITH EMAIL: " + user.email);
-
-        /// <---
-        /*
-         connection.query("SELECT * FROM users WHERE email = 'vincent@smigla-bobinski.com'", function(err, result) {
-         
-         if (result !== undefined) {
-         
-         for (var i = 0; i < result.rows.length; i++) {
-         var row = result.rows[i];
-         }
-            res.render('login', {title: 'Home', user: row});
-         }else{
-                console.log(err);
-                res.redirect('/');
-         }
-         });
-          */
         res.render('login', {title: 'Home', user: user});
+        
+    } else {
+        
+        emailManagement.sendConfirmationMail(user);
+        req.logout();
+        res.render('confirmation', {
+                   name: user.firstname,
+                   mail: user.email
+                   });
     }
     
 };
 
 var postLogin = function(req, res, next){
-    console.log('[+] BRAKEPOINT [1]');
+
     var user = req.body;
-    console.log(user);
+    
     passport.authenticate('local', { successRedirect: '/login', failureRedirect: '/'}, function(err, user, info) {
-                          console.log('[+] BRAKEPOINT [2]');
+
                           if(err) {
-                                console.log('[+] BRAKEPOINT [3]');
-                               return res.render('index', {title: 'Sign In', errorMessage: err.message});
+                          return res.render('index', {title: 'Sign In', errorMessage: err.message});
                           }
                           
                           if(!user) {
-                                console.log('[+] BRAKEPOINT [4]');
-                                console.log(user);
-                               return res.render('index', {title: 'Sign In', errorMessage: info.message});
+                          return res.render('index', {title: 'Sign In', errorMessage: info.message});
                           }
                           
                           return req.logIn(user, function(err) {
-                                console.log('[+] BRAKEPOINT [5]');
-                          if(err) {
-                                return res.render('index', {title: 'Sign In', errorMessage: err.message});
-                          } else {
-                                return res.redirect('/login');
-                          }
-                          });
-    })(req, res, next);
+                                           
+                                           if(err) {
+                                           return res.render('index', {title: 'Sign In', errorMessage: err.message});
+                                           } else {
+                                           return res.redirect('/login');
+                                           }
+                                           });
+                          })(req, res, next);
 };
+
+// -------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+// SIGNUP METHODS ----------------------------------------------------------------------------------------
+
 
 var getSignUp = function(req, res, next) {
     
@@ -101,85 +121,139 @@ var postSignUp = function(req, res, next){
     var emailPromise = null;
     emailPromise = new Model.User({email: user.email}).fetch();
     
+    var token = 0;
+    require('crypto').randomBytes(48, function(ex, buf) {
+        token = buf.toString('hex');
+    });
+    
     return emailPromise.then(function(model) {
-                                if(model) {
-                                    //res.render('signup', {title: 'signup', errorMessage: 'email already exists'});
-                                    res.render('index', {title: 'Sign Up'});
-                                } else {
-                                
-                                //****************************************************//
-                                // MORE VALIDATION GOES HERE(E.G. PASSWORD VALIDATION)//
-                                //****************************************************//
-                                
-                                var password = user.password;
-                                var hash = bcrypt.hashSync(password);
-                                
-                                var signUpUser = new Model.User({
-                                                                email: user.email,
-                                                                firstname: user.firstname,
-                                                                lastname: user.lastname,
-                                                                street: user.street,
-                                                                housenumber: user.housenumber,
-                                                                postalcode: user.postalcode,
-                                                                city: user.city,
-                                                                mobile: user.mobile,
-                                                                password: hash
-                                                                });
-                                
-                                signUpUser.save().then(function(model) {
-                                                       // sign in the newly registered user
-                                                       postLogin(req, res, next);
-                                                       //res.render('driver', {title: 'Sign Up'});
-                                                       });
-                                }
-                                });
+                             if(model) {
+                             console.log("[+] Mail allready exists ... ");
+                             res.render('index', {title: 'Sign Up'});
+                             } else {
+                             
+                             var password = user.password;
+                             var hash = bcrypt.hashSync(password);
+                             
+                             var signUpUser = new Model.User({
+                                                             email: user.email,
+                                                             firstname: user.firstname,
+                                                             lastname: user.lastname,
+                                                             street: user.street,
+                                                             housenumber: user.housenumber,
+                                                             postalcode: user.postalcode,
+                                                             city: user.city,
+                                                             mobile: user.mobile,
+                                                             password: hash,
+                                                             token: token,
+                                                             confirmed: false
+                                                             });
+                             
+                             signUpUser.save().then(function(model) {
+
+                                                    emailManagement.sendConfirmationMail(model.attributes);
+                                                    res.render('confirmation', {
+                                                               name: model.attributes.firstname,
+                                                               mail: model.attributes.email
+                                                               });
+                                                    
+                                                    });
+                             }
+                             });
     
 };
 
+var signUpWithPassport = new LocalStrategy({
+                                           usernameField: 'email',
+                                           passwordField: 'password'
+                                           },function(username, password, done) {
+                                           new Model.User({email: username}).fetch().then(function(data) {
+                                                                                          
+                                                                                          var user = data;
+                                                                                          console.log('[*] LOGIN ATEMPT');
+                                                                                          
+                                                                                          if(user === null) {
+                                                                                          return done(null, false, {message: 'Invalid email or password'});
+                                                                                          console.log('  [X] not Authenticated');
+                                                                                          } else {
+                                                                                          user = data.toJSON();
+                                                                                          
+                                                                                          if(!bcrypt.compareSync(password, user.password)) {
+                                                                                          console.log('  [X] not Authenticated');
+                                                                                          return done(null, false, {message: 'Invalid email or password'});
+                                                                                          } else {
+                                                                                          console.log('  [V] Authenticated');
+                                                                                          return done(null, user);
+                                                                                          }
+                                                                                          }
+                                                                                          });
+                                           
+                                           });
+
+// -------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+// SIGN OUT METHODS --------------------------------------------------------------------------------------
+
+
 var getSignOut = function(req, res, next) {
+    
     console.log('[*] getSignOut: ');
+    
     if(!req.isAuthenticated()) {
-        console.log('  [X] not Authenticated');
+        
         notFound404(req, res, next);
+        
     } else {
-        console.log('  [V] Authenticated');
+        
         req.logout();
         res.redirect('/');
+        
     }
 };
 
 var notFound404 = function(req, res, next) {
+    
     res.status(404);
     res.render('404', {title: '404 Not Found'});
+    
 };
 
+// -------------------------------------------------------------------------------------------------------
 
 
-var signUpWithPassport = new LocalStrategy({
-                  usernameField: 'email',
-                  passwordField: 'password'
-                  },function(username, password, done) {
-                  new Model.User({email: username}).fetch().then(function(data) {
-                                                                 var user = data;
-                                                                 console.log('[*] LOGIN ATEMPT');
-                                                                 if(user === null) {
-                                                                 return done(null, false, {message: 'Invalid email or password'});
-                                                                 console.log('  [X] not Authenticated');
-                                                                 } else {
-                                                                 user = data.toJSON();
-                                                                 
-                                                                 if(!bcrypt.compareSync(password, user.password)) {
-                                                                 console.log('  [X] not Authenticated');
-                                                                 return done(null, false, {message: 'Invalid email or password'});
-                                                                 } else {
-                                                                 console.log('  [V] Authenticated');
-                                                                 return done(null, user);
-                                                                 }
-                                                                 }
-                                                                 });
-});
 
 
+
+
+
+
+
+// VERIFICATION METHODS ----------------------------------------------------------------------------------
+
+
+var getVerify = function(req, res, next){
+    
+    dataManagement.confirmUser(req.params.id, req.params.hash);
+    res.redirect('/');
+    
+};
+
+// -------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+module.exports.getVerify = getVerify;
 
 module.exports.signUpWithPassport = signUpWithPassport;
 

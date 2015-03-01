@@ -7,9 +7,9 @@ var bcrypt = require('bcrypt-nodejs');
 
 var options = {
     
-    cert: 'pushCertifications/cert.pem',
-    key:  'pushCertifications/key.pem',
-    passphrase: 'Sa89Ga90Vi90',
+cert: 'pushCertifications/cert.pem',
+key:  'pushCertifications/key.pem',
+passphrase: 'Sa89Ga90Vi90',
     
 };
 
@@ -32,7 +32,7 @@ function createNoteForDriver(id) {
 
 
 function getDriverForOrder() {
-  
+    
     //var driverToken = '19b844857e0e76b1e85931c80fa13adf17a17eb151759e56329c9d5b36442b6c';
     var driverToken = driverQuery.getDriverToken("no location yet");
     var driverDevice = new apn.Device(driverToken);
@@ -64,6 +64,20 @@ var getOrder = function(req, res){
 
 
 
+var loginDriver = function(req, res) {
+    
+    console.log(" [+] Driver login");
+    
+    var email = req.body.email;
+    var password = req.body.password;
+    
+    console.log("   [-] EMAIL: " + email);
+    console.log("   [-] PASSWORD: " + password);
+    
+};
+
+
+
 var signUpDriver = function(req, res) {
     
     console.log(" [+] Driver signed Up");
@@ -72,9 +86,9 @@ var signUpDriver = function(req, res) {
     var emailPromise = null;
     console.log(" [+] mail: " + driver.email);
     emailPromise = new Model.Driver({email: driver.email}).fetch();
-
+    
     return emailPromise.then(function(model) {
-   
+                             
                              if(model) {
                              
                              //RETURN ERROR
@@ -86,21 +100,23 @@ var signUpDriver = function(req, res) {
                              var hash = bcrypt.hashSync(password);
                              
                              var signUpUser = new Model.Driver({
-                                                             email: driver.email,
-                                                             firstname: driver.firstname,
-                                                             lastname: driver.lastname,
-                                                             street: driver.street,
-                                                             //housenumber: driver.housenumber,
-                                                             postalcode: driver.postalcode,
-                                                             city: driver.city,
-                                                             mobile: driver.mobile,
-                                                             password: hash
-                                                             });
+                                                               email: driver.email,
+                                                               firstname: driver.firstname,
+                                                               lastname: driver.lastname,
+                                                               street: driver.street,
+                                                               //housenumber: driver.housenumber,
+                                                               postalcode: driver.postalcode,
+                                                               city: driver.city,
+                                                               mobile: driver.mobile,
+                                                               token: driver.token,
+                                                               confirmed: false,
+                                                               password: hash
+                                                               });
                              
                              signUpUser.save().then(function(model) {
                                                     
-                                //COMMUNICATE SUCCESSFUL SIGNUP ...
-                                console.log(" [+] SUCCESSFULLY SIGNED UP DRIVER");
+                                                    // SUCCESSFUL SIGNUP ...
+                                                    console.log(" [+] SUCCESSFULLY SIGNED UP DRIVER");
                                                     
                                                     });
                              }
@@ -108,6 +124,7 @@ var signUpDriver = function(req, res) {
 };
 
 
+module.exports.loginDriver = loginDriver;
 module.exports.getOrder = getOrder;
 module.exports.signUpDriver = signUpDriver;
 

@@ -1,72 +1,41 @@
+
+
+
+
+
+
 var express = require('express');
 var router = express.Router();
 
+
+
+
+
+
+
 // REQUIRE PASSPORT AND PASSWORD ENCRYPTION ------------------------------------------------------
+
 
 var passport = require('passport');
 var bcrypt = require('bcrypt-nodejs');
 var LocalStrategy = require('passport-local').Strategy;
 var usersRoute = require('../bin/authentication');
 var driverManagement = require('../bin/driverManagement');
-
-// -----------------------------------------------------------------------------------------------
-
-
-router.get('/', usersRoute.getIndex); // redirect to Login ...
-
-
-// REQUIRE CUTOM MODEL LIBRARY -------------------------------------------------------------------
-
-var Model = require('../bin/model');  // <-- neccessary ???? enables ORM data with SQL
+var Model = require('../bin/model');
 
 // -----------------------------------------------------------------------------------------------
 
 
 
 
-// LOGIN MTHODS AND ROUTES -----------------------------------------------------------------------
-
-router.get('/login', usersRoute.getLogin);
-
-router.post('/login', usersRoute.postLogin);
-
-// -----------------------------------------------------------------------------------------------
-
-
-// SIGNUP MTHODS AND ROUTES ----------------------------------------------------------------------
-
-//router.get('/signup', usersRoute.getSignUp); // <-- not neccessary for view ... 
-
-router.post('/signup', usersRoute.postSignUp);
-
-// -----------------------------------------------------------------------------------------------
-
-
-// SIGNUOT MTHODS AND ROUTES ---------------------------------------------------------------------
-
-
-router.get('/signout' , usersRoute.getSignOut);
-
-
-// -----------------------------------------------------------------------------------------------
-
-
-// SIGNUOT MTHODS AND ROUTES ---------------------------------------------------------------------
-
-
-router.get('erorr', usersRoute.notFound404);
-
-
-// -----------------------------------------------------------------------------------------------
 
 
 
-// SIGNUOT MTHODS AND ROUTES ---------------------------------------------------------------------
 
-router.post('/signUpDriver', driverManagement.signUpDriver);
+// VIEW ROUTES -----------------------------------------------------------------------------------
 
-// -----------------------------------------------------------------------------------------------
 
+router.get('/', usersRoute.getIndex);
 
 router.get('/driver', function(req, res) {
            res.render('driver', { title: 'Express' });
@@ -76,6 +45,66 @@ router.get('/restaurant', function(req, res) {
            res.render('restaurant', { title: 'Express' });
            });
 
+// -----------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+// LOGIN MTHODS AND ROUTES -----------------------------------------------------------------------
+
+
+router.get('/login', usersRoute.getLogin);
+
+router.post('/login', usersRoute.postLogin);
+
+// -----------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+// SIGNUP MTHODS AND ROUTES ----------------------------------------------------------------------
+
+
+router.post('/signup', usersRoute.postSignUp);
+
+router.get('/signout' , usersRoute.getSignOut);
+
+router.get('/verify/:id/:hash', usersRoute.getVerify);
+
+router.get('erorr', usersRoute.notFound404);
+
+
+// -----------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+// DRIVER REGISTRATION ROUTES --------------------------------------------------------------------
+
+
+router.post('/signUpDriver', driverManagement.signUpDriver);
+router.post('/loginDriver', driverManagement.loginDriver);
+
+// -----------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
 
 // OREDR MTHODS AND ROUTES ---------------------------------------------------------------------
 
@@ -84,7 +113,6 @@ router.get('/order/:userid',driverManagement.getOrder);
 
 router.get('/order',function(req, res){
            var params = req.params;
-           console.log("[+] User with id: ");
            res.redirect('/login');
            });
 
@@ -93,7 +121,12 @@ router.get('/order',function(req, res){
 
 
 
+
+
+
+
 // PASSPORT METHODS ------------------------------------------------------------------------------
+
 
 passport.use(usersRoute.signUpWithPassport);
 
@@ -112,4 +145,13 @@ passport.deserializeUser(function(email, done) {
 
 
 
+
+
+
 module.exports = router;
+
+
+
+
+
+

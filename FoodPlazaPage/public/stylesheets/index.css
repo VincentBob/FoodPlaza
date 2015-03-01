@@ -92,7 +92,7 @@
     border-bottom-right-radius: 2px;
     position:absolute;
     line-height:35px;
-    top:92px;
+    top:62px;
 }
 
 .subtitle {
@@ -166,7 +166,7 @@ video#bgvid {
     height:55px;
     width:100%;
     position:relative;
-    top:49%;
+    top:48%;
     padding-top:24px;
     opacity:0;
 }
@@ -179,7 +179,7 @@ video#bgvid {
     position:absolute;
     right:50%;
     margin-right:-135px;
-    top:59%;
+    top:56%;
     border-radius:2px;
     color:white;
     font-size:26px;
