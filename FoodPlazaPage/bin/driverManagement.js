@@ -82,7 +82,17 @@ var loginDriver = function(req, res) {
           if(model) {
           
             console.log("   [*] DRIVER FOUND FOR EMAIL");
-            console.log(model.get('password'));
+            var hash = bcrypt.hashSync(password);
+                                                    
+            if(bcrypt.compareSync(model.get('password'), hash)){
+                                                
+                console.log("     [!] AUTHORISTATION SUCCESSFUL");
+                                                    
+            }else{
+            
+                console.log("[!] AUTHORISATION FAILED");
+                        
+            };
           
           } else {
           
@@ -90,7 +100,7 @@ var loginDriver = function(req, res) {
           
           };
           });
-    res = 1;
+    
     
     
 };
@@ -110,8 +120,8 @@ var signUpDriver = function(req, res) {
                              
                              if(model) {
                              
-                             //RETURN ERROR
-                             //DRIVER ALLREADY EXISTS !!!
+                                 //RETURN ERROR
+                                 //DRIVER ALLREADY EXISTS !!!
                              
                              } else {
                              
