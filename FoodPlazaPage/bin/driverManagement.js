@@ -76,7 +76,7 @@ var loginDriver = function(req, res) {
     console.log("   [-] PASSWORD: " + password);
     console.log("   [-] TOKEN: " + token);
     
-    
+    /*
     new Driver({'email': email})
     .fetch()
     .then(function(model) {
@@ -92,6 +92,7 @@ var loginDriver = function(req, res) {
           
           };
           });
+     */
     
     
 };
