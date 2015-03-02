@@ -69,10 +69,12 @@ var loginDriver = function(req, res) {
     console.log(" [+] Driver login");
     
     var email = req.body.email;
-    var password = req.body.password;
-    
+    var password = req.body.password; 
+    var token = req.body.token;    
+
     console.log("   [-] EMAIL: " + email);
     console.log("   [-] PASSWORD: " + password);
+    console.log("   [-] TOKEN: " + token);
     
 };
 
