@@ -86,7 +86,7 @@ var loginDriver = function(req, res) {
             if(bcrypt.compareSync(password, model.get('password'))){
                                                 
                 console.log("     [!] AUTHORISTATION SUCCESSFUL");
-                // put Dirver ID onto MongoDB !!! 
+                // put Dirver ID onto MongoDB !!!
                                                     
             }else{
             
