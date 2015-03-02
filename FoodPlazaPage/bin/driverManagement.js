@@ -90,7 +90,7 @@ var loginDriver = function(req, res) {
           
           };
           });
-     
+    res = 1;
     
     
 };
