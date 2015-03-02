@@ -82,13 +82,13 @@ var loginDriver = function(req, res) {
           if(model) {
           
             console.log("   [*] DRIVER FOUND FOR EMAIL");
-            var hash = bcrypt.hashSync(password);
-            var hash2 = model.get('password');
+            //var hash = bcrypt.hashSync(password);
+            //var hash2 = model.get('password');
             console.log("     [#] HASH: " + hash);
             console.log("     [#] PASSWORD: " + hash2);
                                                     
                                                     
-            if(bcrypt.compareSync(hash2, hash)){
+            if(bcrypt.compareSync(password, model.get('password'))){
                                                 
                 console.log("     [!] AUTHORISTATION SUCCESSFUL");
                                                     
