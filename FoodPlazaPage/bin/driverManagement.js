@@ -77,7 +77,7 @@ var loginDriver = function(req, res) {
     console.log("   [-] TOKEN: " + token);
     
     console.log("   [*] starting driver query");
-    new Driver({'email': email}).fetch().then(function(model) {
+    new Model.Driver({'email': email}).fetch().then(function(model) {
           console.log("   [*] QERY STARTED");
           if(model) {
           
