@@ -83,7 +83,7 @@ var loginDriver = function(req, res) {
           
             console.log("   [*] DRIVER FOUND FOR EMAIL");
                                                     
-            if(bcrypt.compareSync(password, model.get('password'))){
+            if(bcrypt.compareSync(password, model.get('password')) && (model.get('token')) === token){
                                                 
                 console.log("     [!] AUTHORISTATION SUCCESSFUL");
                 // put Dirver ID onto MongoDB !!!
