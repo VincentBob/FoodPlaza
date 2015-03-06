@@ -1,37 +1,40 @@
 
 <!DOCTYPE html>
-<head>
-</head>
+
+
+<!--
 <div class="header" >
     <div class="bigLogoHomeButton"onClick="location.href='../'"></div>
     <div class="advertisement">
         <div class="advertisementButton" onClick="location.href='../restaurant'" style="background-color:#FF6961; color:white; border:0px solid #FFFFFF;">RESTAURANT</div>
         <div class="advertisementButton" onClick="location.href='../driver'" style="background-color:#202020; color:white; border:0px solid #FF6961; ">FAHRER</div>
         <div id="advertisementT_2" class="advertisementT" style="float:right;width:18%;"></div>
-        <!--<div class="smallLogo" onClick="location.href='../'" ></div>-->
         <div id="advertisementT_1" class="advertisementT" style="float:left;width:30%;"></div>
     </div>
     <div class="leftIconButton" style="background-color: transparent; color:#FF6961;left:2px;" onClick="loadLoginForm()">ANMELDEN</div>
     <div class="leftIconButton" style="background-color: #FF6961; color:white; left:140px;" onClick="loadsignupForm()">REGISTRIEREN</div>
 </div>
-
-<!--
-<div class="socialMenue" >
-    <div onclick="facebook()" id="facebook" class="socialButton" style="background-image: url('/images/facebook.jpg');"onmouseover="buttonOver('facebook')" onmouseout="buttonOut('facebook')"></div>
-    <div onclick="instegram()" id="instegram" class="socialButton" style="background-image: url('/images/instegram.jpg');"onmouseover="buttonOver('instegram')" onmouseout="buttonOut('instegram')"></div>
-    <div onclick="twitter()" id="twitter" class="socialButton" style="background-image: url('/images/twitter.jpg');"onmouseover="buttonOver('twitter')" onmouseout="buttonOut('twitter')"></div>
-    <div onclick="pinterest()" id="pinterest" class="socialButton" style="background-image: url('/images/pinterest.jpg');"onmouseover="buttonOver('pinterest')" onmouseout="buttonOut('pinterest')"></div>
-</div>
 -->
+
+
+<div class="header"style="height:120px; background-image:url('/images/noimage.jpg');background-color:rgba(10,10,10,0.42);border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:rgba(255, 255, 255, 0.6); color:white; text-align: center; line-height:180px; font-size:35px; font-family:myThirdFont;">FOOD PLAZA
+    <div class="advertisement" style="height:50px;background-image:url('/images/noimage.jpg');background-color:rgba(10,10,10,1.0);">
+        <div class="advertisementButton" onClick="location.href='../restaurant'" style="background-color:#FF6961; color:white; border:0px solid #FFFFFF;">RESTAURANT</div>
+        <div class="advertisementButton" onClick="location.href='../driver'" style="background-color:#202020; color:white; border:0px solid #FF6961; ">FAHRER</div>
+    </div>
+    <div class="leftIconButton" style="background-color: transparent; color:#FF6961;left:2px; top:70px;" onClick="loadLoginForm()">ANMELDEN</div>
+    <div class="leftIconButton" style="background-color: #FF6961; color:white; left:140px; top:70px; " onClick="loadsignupForm()">REGISTRIEREN</div>
+</div>
 
 <video autoplay loop poster="/images/StartingVideoPIC.png" id="bgvid" >
     <source src="/videos/foodPlazaBackGround.mp4" type="video/mp4">
     <source src="/images/backgroundmovietwo.mp4" type="video/mp4">
 </video>
+
 <div class="videWindowDiv">
     <div class="registerButton" onclick="openSignUpDiv()">JOIN US</div>
     <div class="sloganDiv">
-        YOUR FAVORITE RESTAURANTS
+        YOUR FAVORITE RESTAURANTS AT HOME
     <span></br>Bestelle bei einer Auswahl der beliebtesten Restaurants deiner Stadt</span>
     </div>
 </div>
@@ -39,8 +42,13 @@
 <div id="loginFormDiv" class="loginFormDiv" style="overflow: scroll;z-index:201;"></div>
 
 
+<div style="background-color:#282828; width:100%; height:50px;">
+   <div class="detailsHeader">
+       Kein Mindestbestellwert&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Live Fahrertracking &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Original RestaurantPreise
+   </div>
+</div>
 
-<div class="contentDiv1" style="background-color:white;">
+<div class="contentDiv1" style="background-color:rgba(255, 255, 255, 0.92);">
     <div class="centerDiv">
         <div class="details">
             <div class="iCon" style="background-image: url('/images/iphone.png');opacity:0.85;"></div>
@@ -50,13 +58,13 @@
                 </br>Wähle dein</br>
                 Lieblingsrestaurant</br>
                 und bestelle</br>
-                bequem online</br>
+                ganz einfach online</br>
             </div>
         </div>
         <div class="details"style="margin-left:15px;">
             <div class="iCon" style="background-image: url('/images/cook.png');opacity:0.85;"></div>
             <div class="iConText" >
-                <span>THEY PREPARE</br></span>
+                <span>THEY COOK</br></span>
                 <div class="thin" ></div>
                 </br>Das Restaurant</br>
                 erhält deine Bestellung</br>
@@ -72,13 +80,21 @@
                 </br>Unsere Fahrer</br>
                 liefern deine</br>
                 Bestellung schnell</br>
-                und zuverlässig</br>
+                und zuverlässig aus</br>
             </div>
         </div>
     </div>
 </div>
-
-
+<div class="contentDiv1" style="background-color:rgba(0, 0, 0, 0.5);height:650px;">
+    <div class="centerDiv" >
+        <div class="citiesDiv" style="background-image: url('/images/munich_1.png');">
+        </div>
+        <div class="citiesDiv" style="background-image: url('/images/frankfurt_1.png');">
+        </div>
+        <div class="cityText">München</div><div class="cityText">Frankfurt</div>
+    </div>
+</div>
+<!--
 <div class="contentDiv1" style="background-color:#282828;">
     <div class="centerDiv">
         <div class="details">
@@ -95,7 +111,7 @@
         <div class="details"style="margin-left:15px;">
             <div class="iCon" style="background-image: url('/images/leaf.png');"></div>
             <div class="iConText2" >
-                <span>THEY PREPARE</br></span>
+                <span>THEY COOK</br></span>
                 <div class="thin2" ></div>
                 </br>Deine Bestellung</br>
                 wird an das</br>
@@ -115,20 +131,28 @@
             </div>
         </div>
     </div>
-    
-    <div class="contentDiv1" style="background-color:white;">
+    -->
+    <div class="contentDiv1" style="background-color:rgba(255, 255, 255, 0.92);">
         <div class="centerDiv" style="text-align:center; font-family:mySeccondFont; font-size:34px; line-height:20px; padding-top:55px;">
                 Eine fixe Gebühr pro Bestellung</br></br>
-            <span style="font-size:16px; line-height:10px; color:darkgrey;">Wir wollen nicht, dass du dein Geld mit unnötigen Liefergühren verschwendest-
-                Gönne dir zum Besipsile eine heisse Tasse Kaffe. Deswegen beanschlagen wir nur eine kliene feste Gebühr pro Lieferung.
-            </span>
+                <span style="font-size:16px; line-height:10px; color:darkgrey;">
+                    Anstatt hoher Lieferkosten erheben wir nur eine geringe Gebühr </br> So bleibt mehr für dich </span>
             <div style="position:relative; width:180px;height:180px; margin:auto; top:40px; background-image: url('/images/deliveryCosts.jpg'); background-size:cover;">
             </div>
             
         </div>
     </div>
+
+<div class="contentDiv1" style="background-color:rgba(0, 0, 0, 0.5);height:400px;">
+</div>
     
-    <div class="footer"><div>
+    <div class="footer">
+        
+        
+    
+    
+    
+    <div>
     
 </div>
     

@@ -150,14 +150,14 @@ video#bgvid {
     z-index: 10;
     color:white;
     font-family:mySeccondFont;
-    font-size:38px;
+    font-size:34px;
     text-align:center;
     line-height:28px;
 }
 
 .videWindowDiv span {
     
-    font-size:18px;
+    font-size:14px;
     line-height:-20px;
 }
 
@@ -166,7 +166,7 @@ video#bgvid {
     height:55px;
     width:100%;
     position:relative;
-    top:48%;
+    top:42%;//top:48%;
     padding-top:24px;
     opacity:0;
 }
@@ -179,7 +179,7 @@ video#bgvid {
     position:absolute;
     right:50%;
     margin-right:-135px;
-    top:56%;
+    top:52%;//top:56%;
     border-radius:2px;
     color:white;
     font-size:26px;
@@ -194,6 +194,7 @@ video#bgvid {
 .loginFormDiv {
     
     width:600px;
+    padding:0;
     height:0px;
     background-color:rgba(0,0,0,0.9);
     position:fixed;
@@ -201,6 +202,7 @@ video#bgvid {
     margin-left:-300px;
     top:34vh;
     z-index:80;
+    border-width:0px;
     border-radius:10px;
 }
 
@@ -248,6 +250,20 @@ video#bgvid {
     margin:auto;
 }
 
+.detailsHeader {
+ 
+
+ width:900px;
+ height:50px;
+ margin:auto;
+ color:white;
+ font-size:13px;
+ text-align:left;
+ line-height:54px;
+ font-family:mySeccondFont;
+ text-align:center;
+}
+
 .details {
     
     height:100%;
@@ -276,8 +292,8 @@ video#bgvid {
     font-size: 20px;
     text-align: center;
     //font-family: arial;
-    font-family:  myFirstFont;
-    font-weight:bold;
+    font-family:  mySeccondFont;
+    //font-weight:bold;
 }
 
 .iConText span {
@@ -326,6 +342,34 @@ video#bgvid {
     margin:auto;
 }
 
+.citiesDiv {
+ 
+ width:400px;
+ height:400px;
+ margin:10px;
+ float:left;
+ background-size:contain;
+ background-repeat:no-repeat;
+ background-position:bottom;
+ border-bottom-style:solid;
+ border-bottom-width:1px;
+ border-bottom-color:rgba(255,255,255,1.0);
+ margin-top:110px;
+}
+
+.cityText {
+  
+  width:400px;
+  height:40px;
+  margin:10px;
+  margin-top:5px;
+  float:left;
+  color:white;
+  font-size:30px;
+  text-align:center;
+  font-family:MySeccondFont;
+}
+
 .footer {
     
     height: 300px;
@@ -351,7 +395,9 @@ video#bgvid {
 
 @font-face {
     font-family: myThirdFont;
-    src: url('/fonts/BebasNeue Book.otf');
+    //src: url('/fonts/RawengulkPcs.otf');
+    src: url('/fonts/Arkhip_font.ttf');
+    
 }
 
 
