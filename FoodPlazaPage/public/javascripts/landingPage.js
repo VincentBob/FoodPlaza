@@ -1,22 +1,26 @@
 
 
+var fensterHoehe = 0;
+var fensterBreite = 0;
+
 
 function setDimensions(){
     
-    var fensterHoehe = $( window ).height();
-    var fensterBreite = $( window ).width();
+    fensterHoehe = $( window ).height();
+    fensterBreite = $( window ).width();
     
-    if(fensterBreite<1100) {
-        document.getElementById('advertisementT_2').innerHTML = "";
-        document.getElementById('advertisementT_2').style.width='0px';
-        document.getElementById('advertisementT_1').style.marginLeft = "0px";
-        //document.getElementById('advertisementT_1').innerHTML = "BEWIRB DICH JETZT ALS: ";
-    }else{
-        //document.getElementById('advertisementT_1').innerHTML = "WERDE EIN TEIL DER FOOD PLAZA FAMILIE ! ";
-        //document.getElementById('advertisementT_2').innerHTML = "BEWIRB DICH JETZT ALS: ";
-        document.getElementById('advertisementT_2').style.width='18%';
-        document.getElementById('advertisementT_1').style.marginLeft = "2%";
-    };
+    setMac();
+    
+    if (  $(window).scrollTop() <= ( fensterHoehe/2 + 310 ) ) {
+        
+        $('#contentText_2').css({opacity: '0'});
+        $('#contentText_3').css({opacity: '0'});
+    } else if ( $(window).scrollTop() <= ( fensterHoehe/2 + 610 ) ) {
+        
+        $('#contentText_3').css({opacity: '0'});
+    }
+
+    $('.contentText').css({left: ( fensterBreite - $( '#centerDiv1' ).width() )/2 + 590 + 'px', width: 350 + 'px'});
     
     if (fensterHoehe<660) {
         
@@ -66,9 +70,16 @@ function animateOpacity(id,speed,opac) {
     $('.' + id).animate({opacity:opac}, speed, 'linear',
                            function(){
                            });
-     
-    
 }
+
+function animateOpacityWithID(id,speed,opac) {
+    
+    $('#' + id).animate({opacity:opac}, speed, 'linear',
+                        function(){
+                        });
+}
+
+
 
 function bHTML() {
     
@@ -135,6 +146,7 @@ $( window ).resize(function(){
                    mouseEvent('facebook');
                     });
 
+
 function loadsignupForm() {
     
     document.getElementById("loginFormDiv").innerHTML = "";
@@ -175,9 +187,142 @@ function signInButtonOnLoad() {
 
 }
 
-window.onload = setTimeout(function() { signInButtonOnLoad(); }, 1200);//signInButtonOnLoad;
+function screenAnimation() {
+    //background-attachment:fixed;
+    document.getElementById("macScreen").style.backgroundImage = "url('/images/screen_2.jpg')";
+    //document.getElementById("macScreen").style.backgroundPositionY = "0";
+    $('#macScreen').css("background-position", "0px 0px");
+    animateOpacityWithID('macScreen',800,1);
+    setTimeout(function() {
+               document.getElementById("macScreen").style.backgroundImage = "url('/images/scrollScreen.jpg')";
+               }, 2000);
+    
+    setTimeout(function() {
+               /*
+               $('#macScreen').css("background-position", "0px -285px");
+               $('#macScreen').animate({ backgroundPositionY: "-285px" }, 1000, 'linear',
+               function(){});
+               */
+               
+               $('#macScreen').animate({
+                                'border-spacing': -285
+                                },
+                                {
+                                step: function(now, fx) {
+                                $(fx.elem).css("background-position", "0px "+now+"px");
+                                },
+                                duration: 1000
+                                });
+               
+               
+               }, 3000);
+    
+    setTimeout(function() {
+               
+               //$('#macScreen').animate({ backgroundPositionY: "-535px" }, 1000, 'linear',
+                 //                      function(){});
+               
+               $('#macScreen').animate({
+                                       'border-spacing': -250
+                                       },
+                                       {
+                                       step: function(now, fx) {
+                                       $(fx.elem).css("background-position", "0px "+( now-285 )+"px");
+                                       },
+                                       duration: 1000
+                                       });
+               
+               }, 5000);
+    
+    setTimeout(function() {
+               
+               //$('#macScreen').animate({ backgroundPositionY: "-790px" }, 1000, 'linear',
+                 //                      function(){});
+               
+               $('#macScreen').animate({
+                                       'border-spacing': -255
+                                       },
+                                       {
+                                       step: function(now, fx) {
+                                       $(fx.elem).css("background-position", "0px "+( now-535 )+"px");
+                                       },
+                                       duration: 1000
+                                       });
+               
+               }, 7000);
+    
+    setTimeout(function() {
+               animateOpacityWithID('macScreen',400,0);
+               }, 10000);
+}
 
 
+function setOpacity(x) {
+    
+    if ( x < ( fensterHoehe/2 + 610 ) ) {
+        
+        x = x - ( fensterHoehe/2 + 310 );
+        $('#contentText_1').css({opacity: ((300-x)/300)});
+        $('#contentText_2').css({opacity: (x/300)});
+        
+    } else if (  x < ( fensterHoehe/2 + 1010 ) ) {
+        
+        x = x - ( fensterHoehe/2 + 710 );
+        $('#contentText_2').css({opacity: ((300-x)/300)});
+        $('#contentText_3').css({opacity: (x/300)});
+    };
+};
+
+function fadeInContent(x) {
+ 
+    if ( x > fensterHoehe/2 + 1400 &&  x < fensterHoehe/2 + 1900 ) {
+        
+        x = x - ( fensterHoehe/2 + 1400 );
+    
+        $('#cityContent').css('background-color','rgba('+ Math.round((x*255)/500) +','+ Math.round((x*255)/500) +','+ Math.round((x*255)/500) +', '+ ((x/500) + 0.82) +')');
+
+    } else if ( x < fensterHoehe/2 + 1400 ) {
+     
+        $('#cityContent').css('background-color','rgba(0,0,0,0.82)');
+    }
+};
+
+function setMac(){
+    
+    if ( $(window).scrollTop() <= ( fensterHoehe/2 + 310 ) ) {
+        
+        $('.macBook').css({position: 'relative', top: '150px', left: '0px'});
+    } else if ( $(window).scrollTop() <= fensterHoehe/2 + 1100 ) {
+        
+        $('.macBook').css({position: 'fixed'});
+        $('.macBook').css({position: 'fixed', left: ( fensterBreite - $( '#centerDiv1' ).width() )/2 + 'px', top: ((fensterHoehe/2) - 110 ) + 'px' });
+        setOpacity($(window).scrollTop());
+        fadeInContent($(window).scrollTop());
+    } else {
+
+        $('.macBook').css({position: 'relative', top: '940px', left: '0px'});
+        fadeInContent($(window).scrollTop());
+    }
+
+};
+
+
+window.onload = setTimeout(function() {
+                           setDimensions(),
+                           signInButtonOnLoad(),
+                           screenAnimation()
+                           }, 1200);
+
+
+window.setInterval(function () {
+                   screenAnimation();
+                   }, 13000);
+
+
+window.onscroll = function windowScrolled(){
+    
+    setMac();
+};
 
 
 
