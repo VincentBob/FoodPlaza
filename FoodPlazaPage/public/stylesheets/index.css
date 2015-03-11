@@ -312,6 +312,15 @@ video#bgvid {
   margin-top:180px;
 }
 
+.socialIcon {
+    
+    width:80px; height:80px;
+    background-size:cover;
+    float:left;
+    margin:10px;
+    cursor:pointer;
+}
+
 .footer {
     
     height: 300px;

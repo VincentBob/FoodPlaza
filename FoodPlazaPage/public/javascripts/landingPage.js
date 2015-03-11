@@ -275,16 +275,22 @@ function setOpacity(x) {
 
 function fadeInContent(x) {
  
-    if ( x > fensterHoehe/2 + 1400 &&  x < fensterHoehe/2 + 1900 ) {
+    if ( x > fensterHoehe/2 + 1400 &&  x < fensterHoehe/2 + 1800 ) {
         
         x = x - ( fensterHoehe/2 + 1400 );
     
-        $('#cityContent').css('background-color','rgba('+ Math.round((x*255)/500) +','+ Math.round((x*255)/500) +','+ Math.round((x*255)/500) +', '+ ((x/500) + 0.82) +')');
-
+        $('#cityContent').css('background-color','rgba('+ Math.round((x*255)/400) +','+ Math.round((x*255)/400) +','+ Math.round((x*255)/400) +', '+ ((x/400) + 0.82) +')');
+        $('#cityCenter').css('color','rgba(28,28,28,'+ (x/400) +')');
+        
     } else if ( x < fensterHoehe/2 + 1400 ) {
      
         $('#cityContent').css('background-color','rgba(0,0,0,0.82)');
-    }
+        $('#cityCenter').css('color','rgba(28,28,28,0)');
+    } else {
+      
+        $('#cityContent').css('background-color','rgba(255,255,255,1.0)');
+        $('#cityCenter').css('color','rgba(28,28,28,1)');
+    };
 };
 
 function setMac(){
