@@ -26,7 +26,7 @@
 <div id="loginFormDiv" class="loginFormDiv" style="overflow: scroll;z-index:201;"></div>
 
 
-<div style="background-color:#282828; width:100%; min-width:1000px; height:50px;">
+<div class="infoStrip">
    <div class="detailsHeader">
        Kein Mindestbestellwert&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Live Fahrertracking &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Original RestaurantPreise
    </div>
@@ -35,25 +35,26 @@
 
 <div class="contentDiv1" style="background-color:rgba(0, 0, 0, 0.82); height:1450px; ">
 
-    <div id="centerDiv1" class="centerDiv" style=" min-width:1000px; max-width:1100px; ">
+    <div id="centerDiv1" class="centerDiv">
         
         
         <div class="macBook">
             
-            <div style ="width:410px;height:260px; position:absolute; bottom:39px; right:70px; background-image: url('/images/screen_1.jpg'); background-size:cover; border-radius:1px;"></div>
-            <div class="macScreen" id="macScreen" style ="width:410px;height:260px; position:absolute; bottom:39px; right:70px; background-image: url('/images/screen_2.jpg'); background-size:cover; opacity:0.0;border-radius:1px;" ></div>
+            <div class="macScreenBack"></div>
+            <div class="macScreen" id="macScreen"></div>
             
-            <div style ="width:100px;height:200px; position:absolute; bottom:2px; right:20px; background-image: url('/images/phone.png'); background-size:cover;" >
-                <div style ="width:86px;height:150px; background-image: url('/images/iBack.jpg'); position:relative; background-size:cover; margin:auto; margin-top:26px; border-radius:1px;" ></div>
+            <div class="phone">
+                <div class="phoneBack"></div>
             </div>
             
         </div>
+        
         
         <div id="contentText_1" class="contentText" style="top:150px;">
             <div class="iCon" style="background-image: url('/images/heart.png');"></div>
             YOU CHOOSE</br>
             <div class="detailText">Jetzt kommen die angesagtesten Restaurants zu dir! Bestelle einfach und bequem online.
-            Lass uns gemeinsam ein Statement im Namen der guten Küche setzen und werde noch Heute Teil von FOOD PLAZA.
+            Lass uns gemeinsam ein Statement im Namen der guten Küche setzen und werde noch Heute Teil von FOOD PLAZA.
             </div>
         </div>
         <div id="contentText_2" class="contentText" style="top:550px;">
@@ -71,28 +72,32 @@
                 zuverlässig ans Ziel. Verfolge deine Bestellung via LIVE TRACKING und behalte die Übersicht über deinen Lieferststus.
             </div>
         </div>
+        
      
     </div>
 
 </div>
 
-<div  id="cityContent" class="contentDiv1" style="background-color:rgba(0, 0, 0, 0.82); height:1000px; ">
+<div style="background-image:url('/images/munichBig.png'); background-color:rgba(0, 0, 0, 0.82); height:800px; width:100%; background-size:contain; background-repeat:no-repeat; background-position:bottom;"></div>
+
+
+<!--
+<div  id="cityContent" class="contentDiv1" style="background-color:rgba(0, 0, 0, 0.82); height:800px; ">
     
-    <div id="cityCenter" class="centerDiv" style=" height:700px; margin-top:0px; overflow:auto; line-height:120px; color:rgba(28,28,28, 0);">
+    <div id="cityCenter" class="centerDiv" style=" height:800px; margin-top:0px; overflow:auto; line-height:120px; color:rgba(28,28,28, 0);">
         DER LIEFERSERVICE FÜR DEINE STADT !
        
-       <div style="width:999px; height:auto; overflow:auto; ">
-        <div style="background-size:cover; margin:5px; margin-left:35px; width:303px; height:350px; background-color:yellow; float:left; background-image:url('/images/munich_6.jpg');"></div>
-        <div style="background-size:cover; margin:5px; width:303px; height:170px; background-color:yellow; float:left; background-image:url('/images/munich_7.jpg');"></div>
-        <div style="background-size:cover; margin:5px; width:303px; height:170px; background-color:yellow; float:left; background-image:url('/images/munich_10.jpg');"></div>
-        <div style="background-position:center; background-size:cover; margin:5px; width: 616px; height:170px; background-color:yellow; float:left; background-image:url('/images/munich_9.jpg');"></div>
-        <div style="width:973px; height:360px; background-color:rgba(0,255,0,0.0); position:absolute; color:rgba(255,255,255,1.0); font-size:112px; line-height:190px; text-align:right;"></br>MÜNCHEN</div>
-        
+       <div class="citiesImage">
+       </div>
+       
     </div>
     
 </div>
+-->
 
-<div class="footer">
+<!--<div style="background-color:white; height:500px; width:100%;"></div>-->
+
+<div class="footer" style="background-color:black;">
     <div style="height:auto; overflow:auto; width:400px; margin:auto;">
     <div class="socialIcon" style="background-image:url('/images/F.jpg');"></div>
     <div class="socialIcon" style="background-image:url('/images/T.jpg');"></div>

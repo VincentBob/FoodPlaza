@@ -60,9 +60,6 @@ function slideBack() {
                             });
 }
 
-
-//window.onload = setMargin;
-
 $( window ).resize(function(){
                   
                    });

@@ -20,7 +20,7 @@ function setDimensions(){
         $('#contentText_3').css({opacity: '0'});
     }
 
-    $('.contentText').css({left: ( fensterBreite - $( '#centerDiv1' ).width() )/2 + 590 + 'px', width: 350 + 'px'});
+    $('.contentText').css({left: ( fensterBreite - $('#centerDiv1').width() )/2 + $('.macBook').width() + 40 + 'px', width: 350 + 'px'});
     
     if (fensterHoehe<660) {
         
@@ -286,7 +286,7 @@ function fadeInContent(x) {
      
         $('#cityContent').css('background-color','rgba(0,0,0,0.82)');
         $('#cityCenter').css('color','rgba(28,28,28,0)');
-    } else {
+    } else if ( x > fensterHoehe/2 + 1800 ) {
       
         $('#cityContent').css('background-color','rgba(255,255,255,1.0)');
         $('#cityCenter').css('color','rgba(28,28,28,1)');
