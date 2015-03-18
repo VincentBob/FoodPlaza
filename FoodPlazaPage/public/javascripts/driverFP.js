@@ -58,11 +58,34 @@ function slideBack() {
     $('#sliderDiv').animate({height:'0'}, 300, 'linear',
                             function(){
                             });
-}
-
-$( window ).resize(function(){
-                  
-                   });
+};
 
 
+var lastElement = null;
+//var lastElement = 1;
+
+function openFooterSection(elementId) {
+    if (lastElement != null) {
+        document.getElementById('H' + lastElement).style.opacity = "0.3";
+        $('#footerSection_' + lastElement).animate({ opacity: "0"}, { duration: 500, queue: false });
+    }
+    document.getElementById('H' + elementId ).style.opacity = "1.0";
+    $('#footerSection_' + elementId ).animate({ opacity: "1"}, { duration: 500, queue: false });
+    
+    lastElement = elementId;
+};
+
+
+
+
+function MouseOver (id) {
+    document.getElementById('H' + id ).style.opacity = "1"
+};
+function MouseOut (id) {
+    if(lastElement === id){
+        
+    }else{
+        document.getElementById('H' + id ).style.opacity = "0.3"
+    }
+};
 

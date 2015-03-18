@@ -149,3 +149,98 @@
 
 
 
+.footerInfo{
+    position: relative;
+    width:100%;
+    min-width:1000px;
+    height: 650px;
+    background-color: rgba(0,0,0,1);
+    //top: 600px;
+    z-index:2;
+    overflow:scroll;
+}
+.footerHeader{
+    position: relative;
+    top:50px;
+    width:810px;
+    height: 140px;
+    margin: auto;
+    //background-color: rgba(0,0,0,1);
+}
+.footerHeaderElement{
+    position: relative;
+    float:left;
+    width:120px;
+    height:120px;
+    margin-left:65px;
+    background-color:clear;
+    background-image: url('/images/footerIcon.png');
+    background-position:center;
+    background-size: cover;
+    cursor:pointer;
+    opacity:0.3;
+}
+.footerSection{
+    position:absolute;
+    //float:left;
+    top: 160px;
+    left: 180px;
+    width: 350px;
+    height: 400px;
+    opacity:0;
+    //text-align:center;
+    line-height: 25px;
+    overflow:hidden;
+    float:left;
+}
+.FS1{
+    left: -30px;
+}
+.FS2{
+    left: 150px;
+}
+.FS3{
+    left: 330px;
+}
+.FS4{
+    left: 520px;
+}
+.sectioText{
+    font-family: muli;
+    font-size: 15px;
+    color:white;
+}
+.impressum{
+    position: relative;
+    margin: auto;
+    margin-top:100px;
+    width:60%;
+    height: 40px;
+    background-color: clear;
+}
+.impressumSection{
+    position:relative;
+    width: 23%;
+    height:100%;
+    margin-left:2%;
+    background-color:clear;
+    float:left;
+    font-family: mySeccondFont;
+    font-size: 15px;
+    font-weight:bolder;
+    color: rgba(0,0,0,0.5);
+    text-align:center;
+    line-height:30px;
+    cursor:pointer;
+}
+div.impressumSection:hover{
+    color: rgba(0,0,0,1.0);
+}
+.footerDriver {
+    top:150px;
+    height: 300px;
+    width: 100%;min-width:1000px;
+    background-color: white;
+    position: relative;
+    bottom: 0;
+}

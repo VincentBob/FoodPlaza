@@ -1,11 +1,78 @@
-
-<div class="header" >
-    <div class="bigLogoHomeButton"onClick="location.href='../'"></div>
+<!--
+<div class="headerLineLeft"></div>
+<div class="headerLineRight"></div>
+<div class="header">
+    
     <div class="advertisement">
         <div class="advertisementButton" onClick="location.href='../driver'" style="background-color:#FF6961; color:white; border:0px solid #FFFFFF;">FAHRER</div>
         <div class="advertisementButton" onClick="location.href='../'" style="background-color:#202020; color:white; border:0px solid #FF6961; ">HOME</div>
-        <div id="advertisementT_2" class="advertisementT" style="float:right;width:18%;"></div>
-        <div class="smallLogo" onClick="location.href='../'" ></div>
-        <div id="advertisementT_1" class="advertisementT" style="float:left;width:30%;"></div>
+        <div class="mainLogo"></div>
     </div>
+    
 </div>
+-->
+
+
+<div style="width:100%; height:auto; top:0; position:absolute; background-color:rgba(0,0,0,0.9);">
+    
+    
+    <div class="header" style="background-image:url(''); height:70px; background-color:rgba(0,0,0,0.9);">
+        
+        <div class="advertisement" style="background-color:clear;">
+            <div class="advertisementButton" onClick="location.href='../driver'" style="background-color:#FF6961; color:white; border:0px solid #FFFFFF;">FAHRER</div>
+            <div class="advertisementButton" onClick="location.href='../'" style="background-color:#202020; color:white; border:0px solid #FF6961; ">HOME</div>
+            
+        </div>
+        
+        <div class="thinLine"></div>
+    </div>
+    
+    
+    
+    
+    
+    <div class="restaurantTitle">Wilkommen by FoodPlaza</div>
+    <div class="restaurantSubTitle">Werden Sie Teil unserer Platform für ausgwählte Restaurantes</div>
+    <div class="buttonRestaurant" onclick="startRestaurant();">Bewerben Sie sich jetzt</div>
+    
+    
+    
+    
+    
+    <div class="restaurantCenter">
+        <div class="restaurantHeader">
+            <div id="HR1" class="restaurantHeaderElement" onclick="openFooterSectionR('1');" style="background-image: url('/images/watchIcon.png');" onmouseover="MouseOver('1')" onmouseout="MouseOut('1')"></div>
+            <div id="HR2" class="restaurantHeaderElement" onclick="openFooterSectionR('2');" style="background-image: url('/images/dollarIcon.png');" onmouseover="MouseOver('2')" onmouseout="MouseOut('2')"></div>
+            <div id="HR3" class="restaurantHeaderElement" onclick="openFooterSectionR('3');" style="background-image: url('/images/phoneIcon.png');" onmouseover="MouseOver('3')" onmouseout="MouseOut('3')"></div>
+            <div id="HR4" class="restaurantHeaderElement" onclick="openFooterSectionR('4');"  style="background-image: url('/images/scooterIcon.png');"onmouseover="MouseOver('4')" onmouseout="MouseOut('4')"></div>
+            
+            <div id="footerSectionR_1" class="footerSection FS1 sectioText">
+                <h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</h2><br> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </div>
+            <div id="footerSectionR_2" class="footerSection FS2 sectioText">
+                <h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</h2><br> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </div>
+            <div id="footerSectionR_3" class="footerSection FS3 sectioText">
+                <h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</h2><br> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </div>
+            <div id="footerSectionR_4" class="footerSection FS4 sectioText">
+                <h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</h2><br> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            </div>
+            
+        </div>
+        
+        
+    </div>
+    <div id="downIcon" class="downIcon" onclick="scrollDownRestaurant();"></div>
+    <div class="footerRestaurant">
+        <div class="restaurantTitle" style="top:30px;">Unsere Partner Restaurantes</div>
+        <div class="restaurantSubTitle" style="top:20px;">Werden Sie Teil unserer Platform für ausgwählte Restaurantes</div>
+        <div class="restaurantesContainer"></div>
+    </div>
+    
+    
+</div>
+<script>
+    animationRestaurant2();
+    downIcon();
+</script>

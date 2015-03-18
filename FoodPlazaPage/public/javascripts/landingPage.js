@@ -9,61 +9,26 @@ function setDimensions(){
     fensterHoehe = $( window ).height();
     fensterBreite = $( window ).width();
     
-    setMac();
+    scrollAnimations();
     
-    if (  $(window).scrollTop() <= ( fensterHoehe/2 + 310 ) ) {
+    if ($(window).scrollTop()<610) {
+    
+        $('#contentText_1').css({opacity: 1});
+        $('#contentText_2').css({opacity: 0});
+        $('#contentText_3').css({opacity: 0});
         
-        $('#contentText_2').css({opacity: '0'});
-        $('#contentText_3').css({opacity: '0'});
-    } else if ( $(window).scrollTop() <= ( fensterHoehe/2 + 610 ) ) {
+    } else if ($(window).scrollTop() > 1400) {
         
-        $('#contentText_3').css({opacity: '0'});
+        $('#contentText_1').css({opacity: 0});
+        $('#contentText_2').css({opacity: 0});
+        $('#contentText_3').css({opacity: 1});
+        
     }
 
+    
     $('.contentText').css({left: ( fensterBreite - $('#centerDiv1').width() )/2 + $('.macBook').width() + 40 + 'px', width: 350 + 'px'});
     
-    if (fensterHoehe<660) {
-        
-        $('.signUpDiv').css('top','260px');
-        
-    } else {
-        
-        $('.signUpDiv').css('top','40vh');
-        
-    }
-    
 };
-
-
-function buttonOver(id) {
-    
-    document.getElementById(id).style.width = '250px';
-    document.getElementById(id).style.backgroundImage = "url('/images/" + id + "LB.jpg')";
-}
-
-
-function buttonOut(id) {
-    
-    document.getElementById(id).style.width = '50px';
-    document.getElementById(id).style.backgroundImage = "url('/images/" + id + ".jpg')";
-
-}
-
-
-function signOver(id) {
-
-    document.getElementById(id + 'Login').style.backgroundImage = "url('/images/" + id + "Soon.jpg')";
-    document.getElementById(id + 'Login').innerHTML = "";
-}
-
-
-function signOut(id) {
-    
-    var placeholder = '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
-    document.getElementById(id + 'Login').style.backgroundImage = "url('/images/" + id + "L.jpg')";
-    document.getElementById(id + 'Login').innerHTML = placeholder + "Sign in with " + id;
-    
-}
 
 function animateOpacity(id,speed,opac) {
     
@@ -114,6 +79,7 @@ function loadLoginForm(){
     document.getElementById("loginFormDiv").style.opacity="1";
     document.getElementById("loginFormDiv").style.top="50%";
     document.getElementById("loginFormDiv").style.marginTop="-100px";
+    
     var theDiv = document.getElementById("loginFormDiv");
     theDiv.appendChild(bHTML());
     
@@ -130,22 +96,11 @@ function unLoadLoginForm(){
     animateOpacity('loginEnterButton',800,0);
     animateOpacity('loginFormTextField',800,0);
     animateOpacity('popUpCloseButton',800,0);
+    
     setTimeout(function() { document.getElementById("loginFormDiv").style.height="0px"; }, 900);
     setTimeout(function() { document.getElementById("loginFormDiv").innerHTML = ""; }, 900);
     setTimeout(function() { animateOpacity('loginFormDiv', 800,0); }, 100);
 };
-
-
-$( document ).ready(function(){
-                    setDimensions();
-                    });
-
-
-$( window ).resize(function(){
-                    setDimensions();
-                   mouseEvent('facebook');
-                    });
-
 
 function loadsignupForm() {
     
@@ -154,6 +109,7 @@ function loadsignupForm() {
     document.getElementById("loginFormDiv").style.opacity="1";
     document.getElementById("loginFormDiv").style.top="50%";
     document.getElementById("loginFormDiv").style.marginTop="-205px";//"-25vh";
+    
     var theDiv = document.getElementById("loginFormDiv");
     theDiv.appendChild(signupHTML());
     
@@ -172,6 +128,7 @@ function openSignUpDiv() {
     document.getElementById("loginFormDiv").style.opacity="1";
     document.getElementById("loginFormDiv").style.top="50%";
     document.getElementById("loginFormDiv").style.marginTop="-205px";//"-25vh";
+    
     var theDiv = document.getElementById("loginFormDiv");
     theDiv.appendChild(registerHTML());
     
@@ -188,22 +145,17 @@ function signInButtonOnLoad() {
 }
 
 function screenAnimation() {
-    //background-attachment:fixed;
+
     document.getElementById("macScreen").style.backgroundImage = "url('/images/screen_2.jpg')";
-    //document.getElementById("macScreen").style.backgroundPositionY = "0";
     $('#macScreen').css("background-position", "0px 0px");
     animateOpacityWithID('macScreen',800,1);
+    
     setTimeout(function() {
                document.getElementById("macScreen").style.backgroundImage = "url('/images/scrollScreen.jpg')";
                }, 2000);
     
     setTimeout(function() {
-               /*
-               $('#macScreen').css("background-position", "0px -285px");
-               $('#macScreen').animate({ backgroundPositionY: "-285px" }, 1000, 'linear',
-               function(){});
-               */
-               
+
                $('#macScreen').animate({
                                 'border-spacing': -285
                                 },
@@ -218,10 +170,7 @@ function screenAnimation() {
                }, 3000);
     
     setTimeout(function() {
-               
-               //$('#macScreen').animate({ backgroundPositionY: "-535px" }, 1000, 'linear',
-                 //                      function(){});
-               
+
                $('#macScreen').animate({
                                        'border-spacing': -250
                                        },
@@ -236,9 +185,7 @@ function screenAnimation() {
     
     setTimeout(function() {
                
-               //$('#macScreen').animate({ backgroundPositionY: "-790px" }, 1000, 'linear',
-                 //                      function(){});
-               
+
                $('#macScreen').animate({
                                        'border-spacing': -255
                                        },
@@ -254,22 +201,35 @@ function screenAnimation() {
     setTimeout(function() {
                animateOpacityWithID('macScreen',400,0);
                }, 10000);
+    
 }
 
 
 function setOpacity(x) {
     
-    if ( x < ( fensterHoehe/2 + 610 ) ) {
+    if ( x < ( fensterHoehe/2 + 660 ) ) {
         
         x = x - ( fensterHoehe/2 + 310 );
-        $('#contentText_1').css({opacity: ((300-x)/300)});
-        $('#contentText_2').css({opacity: (x/300)});
+        if ( x >= 0 ) {
+            
+            $('#contentText_1').css({opacity: ((300-x)/300)});
+            $('#contentText_2').css({opacity: (x/300)});
+            $('#contentText_3').css({opacity: 0});
+            
+        } else {
+            
+            $('#contentText_1').css({opacity: 1});
+            $('#contentText_2').css({opacity: 0});
+            
+        }
         
-    } else if (  x < ( fensterHoehe/2 + 1010 ) ) {
+    } else if (  x < ( fensterHoehe/2 + 1060 ) ) {
         
         x = x - ( fensterHoehe/2 + 710 );
+        $('#contentText_1').css({opacity: 0});
         $('#contentText_2').css({opacity: ((300-x)/300)});
         $('#contentText_3').css({opacity: (x/300)});
+        
     };
 };
 
@@ -286,48 +246,114 @@ function fadeInContent(x) {
      
         $('#cityContent').css('background-color','rgba(0,0,0,0.82)');
         $('#cityCenter').css('color','rgba(28,28,28,0)');
+        
     } else if ( x > fensterHoehe/2 + 1800 ) {
       
         $('#cityContent').css('background-color','rgba(255,255,255,1.0)');
         $('#cityCenter').css('color','rgba(28,28,28,1)');
+        
     };
 };
 
-function setMac(){
+var headerState = 1;
+
+function scrollAnimations(){
     
-    if ( $(window).scrollTop() <= ( fensterHoehe/2 + 310 ) ) {
+    if ( $(window).scrollTop() <= ( fensterHoehe/2 + 320 ) ) {
         
         $('.macBook').css({position: 'relative', top: '150px', left: '0px'});
-    } else if ( $(window).scrollTop() <= fensterHoehe/2 + 1100 ) {
+        
+    } else if ( $(window).scrollTop() <= fensterHoehe/2 + 1110 ) {
         
         $('.macBook').css({position: 'fixed'});
-        $('.macBook').css({position: 'fixed', left: ( fensterBreite - $( '#centerDiv1' ).width() )/2 + 'px', top: ((fensterHoehe/2) - 110 ) + 'px' });
+        $('.macBook').css({position: 'fixed', left: ( fensterBreite - $( '#centerDiv1' ).width() )/2 + 'px', top: ((fensterHoehe/2) - 130 ) + 'px' });
         setOpacity($(window).scrollTop());
         fadeInContent($(window).scrollTop());
+        
     } else {
-
+        
         $('.macBook').css({position: 'relative', top: '940px', left: '0px'});
         fadeInContent($(window).scrollTop());
+        
+    }
+    
+    if ( $(window).scrollTop() <= ( fensterHoehe/2 ) && headerState == 2 ) {
+        
+        $('.mainLogo').css('height', '230px');
+        $('.header').animate({top:0},{queue: false, duration: 350, easing: 'linear',
+                             complete: function(){
+                             
+                             $('.header').css('border-bottom-width', '0px');
+                             $('.headerLineRight').css('border-bottom-width', '1px');
+                             $('.headerLineLeft').css('border-bottom-width', '1px');
+                             
+                             }
+                             });
+        
+        $('.mainLogo').animate({opacity:1}, 900, 'linear',
+                             function(){
+                             });
+        
+        headerState = 1;
+        
+    } else if ( $(window).scrollTop() > ( fensterHoehe/2 ) && headerState == 1 ) {
+        
+        $('.mainLogo').animate({opacity:0}, 350, 'linear',
+                                    function(){
+                                    $('.mainLogo').css('height', '0px');
+                                    });
+        
+        $('.headerLineRight').css('border-bottom-width', '0px');
+        $('.headerLineLeft').css('border-bottom-width', '0px');
+        $('.header').css('border-bottom-width', '1px');
+        
+        headerState = 2;
+        
     }
 
 };
 
+$( document ).ready(function(){
+                    
+                    setDimensions();
+                    
+                    });
+
+
+$( window ).resize(function(){
+                   
+                   setDimensions();
+                   
+                   });
+
 
 window.onload = setTimeout(function() {
+                           
                            setDimensions(),
                            signInButtonOnLoad(),
                            screenAnimation()
+                           
                            }, 1200);
 
 
 window.setInterval(function () {
+                   
                    screenAnimation();
+                   
                    }, 13000);
 
 
 window.onscroll = function windowScrolled(){
     
-    setMac();
+    scrollAnimations();
+    
+};
+
+
+window.onload = function dim(){
+    
+    setDimensions();
+
 };
 
 
