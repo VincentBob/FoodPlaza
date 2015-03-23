@@ -256,17 +256,16 @@ video#bgvid {
 .infoStrip {
     
     //background-color:#282828;
-    background-color:black;
-    width:100%;
-    min-width:1000px;
+    //background-color:black;
+    width:1000px;
     height:40px;
+    margin:0 auto;
 }
 
 .detailsHeader {
  
-    width:33vw;
+    width:333px;
     height:40px;
-    margin:auto;
     color:white;
     font-size:13px;
     text-align:left;
@@ -447,12 +446,13 @@ video#bgvid {
     
     .infoStrip {
         
-        min-width:800px;
+        width:800px;
     }
     
     .detailsHeader {
         
         background-position:10% center;
+        width:266px;
     }
     
     .macBook {
