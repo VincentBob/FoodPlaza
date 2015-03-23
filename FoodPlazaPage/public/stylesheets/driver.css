@@ -2,7 +2,7 @@
 .contentDiv2 {
     
     position: relative;
-    width:100%;min-width:900px;
+    width:1000px;
     height: 600px;
     z-index: 10;
 }
@@ -51,7 +51,7 @@
 .sliderDiv {
 
     height:0px;
-    width:100%;min-width:900px;
+    width:100%;min-width:1000px;
     //top:0;
     //right:0;
     position:absolute;
@@ -153,6 +153,7 @@
     position: relative;
     width:100%;
     min-width:1000px;
+    //width:1000px;
     height: 650px;
     background-color: rgba(0,0,0,1);
     //top: 600px;
@@ -192,8 +193,10 @@
     line-height: 25px;
     overflow:hidden;
     float:left;
+    font-family: myThirdFont;
 }
 .FS1{
+    font-family: myThirdFont;
     left: -30px;
 }
 .FS2{
@@ -206,7 +209,8 @@
     left: 520px;
 }
 .sectioText{
-    font-family: muli;
+    font-family: myThirdFont;
+    //font-family: mySeccondFont;
     font-size: 15px;
     color:white;
 }
