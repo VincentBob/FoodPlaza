@@ -3,6 +3,7 @@
     
     position: relative;
     width:1000px;
+    margin:0 auto;
     height: 600px;
     z-index: 10;
 }
@@ -11,6 +12,7 @@
 
     height:100%;
     width:300px;
+    margin-left:60px;
     background-color:clear;
     background-size:contain;
     background-repeat:no-repeat;
@@ -22,7 +24,7 @@
     height:50px;
     width:500px;
     margin-top:310px;
-    margin-right:77px;
+    margin-right:100px;
     position:relative;
     float:right;
     color:#282828;
@@ -36,7 +38,8 @@
     width:350px;
     height:50px;
     margin-top:5px;
-    margin-right:150px;
+    //left:50%;
+    margin-right:170px;
     position:relative;
     background-color:#FF6961;
     color:white;

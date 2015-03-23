@@ -10,7 +10,7 @@
     font-size:26px;
     text-align:center;
     line-height:50px;
-    font-family:muli;
+    font-family:myThirdFont;
     cursor:pointer;
     opacity:1;
     margin-top:150px;
@@ -19,7 +19,7 @@
 .restaurantTitle{
     position:relative;
     margin:auto;
-    margin-top:100px;
+    margin-top:200px;
     width:50%;
     min-width:1000px;
     height:70px;
@@ -27,7 +27,7 @@
     font-size:3.5vw;
     text-align:center;
     color:white;
-    font-family:muli;
+    font-family:myThirdFont;
 }
 .restaurantSubTitle{
     position:relative;
@@ -38,7 +38,7 @@
     background-color:clear;
     margin:auto:
     font-weight:light;
-    font-family:muli;
+    font-family:myThirdFont;
     font-size:2vw;
     color:white;
     text-align:center;
@@ -47,7 +47,7 @@
     top:0px;
     position: relative;
     width:1000px;
-    height:300px;
+    height:200px;
     margin:100px auto;
     overflow:hidden;
     min-width:1000px;
