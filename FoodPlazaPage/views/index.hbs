@@ -26,7 +26,9 @@
     </div>
 </div>
 
-<div id="loginFormDiv" class="loginFormDiv" style="overflow: scroll;z-index:201;"></div>
+<div id="loginFormDiv" class="loginFormDiv" style="overflow: scroll;z-index:201;">
+    <form method="post" action="/login"><p><div class="loginFormText" style="top:40px;">e-Mail:</div><input type="email" name="email" id="email" placeholder="e-Mail" required="true" class="loginFormTextField" style="top:40px;"/></p><p><div class="loginFormText" style="top:70px;">Passwort:</div><input type="password" name="password" id="password" placeholder="Passwort" required="true" class="loginFormTextField" style="top:70px;"/></p><p><input type="submit" name="login" id="login" class="loginEnterButton" style="top:120px;" value="sign in"/></p><form/><div class="popUpCloseButton" onclick="unLoadLoginForm();">X</div>
+</div>
 
 <div style="width:100%; background-color:black;">
 <div class="infoStrip">

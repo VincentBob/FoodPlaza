@@ -24,7 +24,8 @@ function setDimensions(){
         $('#contentText_3').css({opacity: 1});
         
     }
-
+    
+    loadLoginForm(); // TESTING !!!!
     
     //$('.contentText').css({left: ( fensterBreite - $('#centerDiv1').width() )/2 + $('.macBook').width() + 40 + 'px', width: 350 + 'px'});
     
