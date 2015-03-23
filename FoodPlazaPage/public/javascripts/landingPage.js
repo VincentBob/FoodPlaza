@@ -25,8 +25,6 @@ function setDimensions(){
         
     }
     
-    //$('.contentText').css({left: ( fensterBreite - $('#centerDiv1').width() )/2 + $('.macBook').width() + 40 + 'px', width: 350 + 'px'});
-    
 };
 
 function animateOpacity(id,speed,opac) {
@@ -116,7 +114,6 @@ function loadsignupForm() {
     animateOpacity('loginEnterButton',1700,1);
     animateOpacity('loginFormTextField',1700,1);
     animateOpacity('popUpCloseButton',1700,1);
-    
     
 }
 
