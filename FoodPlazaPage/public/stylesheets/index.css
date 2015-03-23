@@ -239,7 +239,7 @@ video#bgvid {
 .centerDiv {
 
     width:1000px;
-    max-width:1100px;
+    //max-width:1100px;
     height:100%;
     margin:auto;
     color:white;
@@ -282,8 +282,10 @@ video#bgvid {
 
 .iCon {
     
-    height: 10vw; max-height:120px;
-    width: 10vw; max-width:120px;
+    //height: 10vw; //max-height:120px;
+    //width: 10vw; //max-width:120px;
+    height: 110px;
+    width: 110px;
     margin: auto;
     background-size:contain;
     background-repeat: no-repeat;
@@ -291,11 +293,14 @@ video#bgvid {
 
 .contentText {
     
-    max-width: 550px;
-    min-width:350px;
+    //max-width: 550px;
+    //min-width:350px;
+    width:400px;
     height: 350px;
     position: absolute;
-    right:0;
+    left:50%;
+    margin-left:100px;
+    //right:0;
     color: white;
     float:right;
     font-size: 26px;
@@ -474,6 +479,12 @@ video#bgvid {
         height:0px;
         overflow:hidden;
         background-image: none;
+    }
+    
+    .contentText {
+        
+        width:300px;
+        margin-left:30px;
     }
     
     .phone {

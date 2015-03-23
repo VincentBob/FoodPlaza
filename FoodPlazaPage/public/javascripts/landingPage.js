@@ -26,7 +26,7 @@ function setDimensions(){
     }
 
     
-    $('.contentText').css({left: ( fensterBreite - $('#centerDiv1').width() )/2 + $('.macBook').width() + 40 + 'px', width: 350 + 'px'});
+    //$('.contentText').css({left: ( fensterBreite - $('#centerDiv1').width() )/2 + $('.macBook').width() + 40 + 'px', width: 350 + 'px'});
     
 };
 
