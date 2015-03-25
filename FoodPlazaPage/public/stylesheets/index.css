@@ -167,7 +167,7 @@ video#bgvid {
     height:55px;
     width:100%;
     position:relative;
-    top:49vh;//top:48%;
+    top:48vh;//top:48%;
     padding-top:24px;
     opacity:0;
 }
@@ -180,7 +180,7 @@ video#bgvid {
     position:absolute;
     right:50%;
     margin-right:-135px;
-    top:57vh;//top:56%;
+    top:56vh;//top:56%;
     border-radius:2px;
     color:white;
     font-size:26px;
