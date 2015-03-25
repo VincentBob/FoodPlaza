@@ -16,12 +16,14 @@ function setDimensions(){
         $('#contentText_1').css({opacity: 1});
         $('#contentText_2').css({opacity: 0});
         $('#contentText_3').css({opacity: 0});
+        $('#contentText_4').css({opacity: 0});
         
-    } else if ($(window).scrollTop() > 1400) {
+    } else if ($(window).scrollTop() > 1800) {
         
         $('#contentText_1').css({opacity: 0});
         $('#contentText_2').css({opacity: 0});
-        $('#contentText_3').css({opacity: 1});
+        $('#contentText_3').css({opacity: 0});
+        $('#contentText_4').css({opacity: 1});
         
     }
     
@@ -211,11 +213,14 @@ function setOpacity(x) {
             $('#contentText_1').css({opacity: ((300-x)/300)});
             $('#contentText_2').css({opacity: (x/300)});
             $('#contentText_3').css({opacity: 0});
+            $('#contentText_4').css({opacity: 0});
             
         } else {
             
             $('#contentText_1').css({opacity: 1});
             $('#contentText_2').css({opacity: 0});
+            $('#contentText_3').css({opacity: 0});
+            $('#contentText_4').css({opacity: 0});
             
         }
         
@@ -225,25 +230,34 @@ function setOpacity(x) {
         $('#contentText_1').css({opacity: 0});
         $('#contentText_2').css({opacity: ((300-x)/300)});
         $('#contentText_3').css({opacity: (x/300)});
+        $('#contentText_4').css({opacity: 0});
+        
+    } else if ( x < ( fensterHoehe/2 + 1460 ) ) {
+        
+        x = x - ( fensterHoehe/2 + 1110 );
+        $('#contentText_1').css({opacity: 0});
+        $('#contentText_2').css({opacity: 0});
+        $('#contentText_3').css({opacity: ((300-x)/300)});
+        $('#contentText_4').css({opacity: (x/300)});
         
     };
 };
 
 function fadeInContent(x) {
  
-    if ( x > fensterHoehe/2 + 1400 &&  x < fensterHoehe/2 + 1800 ) {
+    if ( x > fensterHoehe/2 + 1800 &&  x < fensterHoehe/2 + 2200 ) {
         
-        x = x - ( fensterHoehe/2 + 1400 );
+        x = x - ( fensterHoehe/2 + 1800 );
     
         $('#cityContent').css('background-color','rgba('+ Math.round((x*255)/400) +','+ Math.round((x*255)/400) +','+ Math.round((x*255)/400) +', '+ ((x/400) + 0.82) +')');
         $('#cityCenter').css('color','rgba(28,28,28,'+ (x/400) +')');
         
-    } else if ( x < fensterHoehe/2 + 1400 ) {
+    } else if ( x < fensterHoehe/2 + 1800 ) {
      
         $('#cityContent').css('background-color','rgba(0,0,0,0.82)');
         $('#cityCenter').css('color','rgba(28,28,28,0)');
         
-    } else if ( x > fensterHoehe/2 + 1800 ) {
+    } else if ( x > fensterHoehe/2 + 2200 ) {
       
         $('#cityContent').css('background-color','rgba(255,255,255,1.0)');
         $('#cityCenter').css('color','rgba(28,28,28,1)');
@@ -255,11 +269,12 @@ var headerState = 1;
 
 function scrollAnimations(){
     
-    if ( $(window).scrollTop() <= ( fensterHoehe/2 + 320 ) ) {
+    if ( $(window).scrollTop() <= ( fensterHoehe/2 + 310 ) ) {
         
-        $('.macBook').css({position: 'relative', top: '150px', left: '0px'});
+        $('.macBook').css({position: 'relative', top: '140px', left: '0px'});
         
-    } else if ( $(window).scrollTop() <= fensterHoehe/2 + 1110 ) {
+    } else if ( $(window).scrollTop() <= fensterHoehe/2 + 1510 ) {
+    //} else if ( $(window).scrollTop() <= fensterHoehe/2 + 1110 ) {
         
         $('.macBook').css({position: 'fixed'});
         $('.macBook').css({position: 'fixed', left: ( fensterBreite - $( '#centerDiv1' ).width() )/2 + 'px', top: ((fensterHoehe/2) - 130 ) + 'px' });
@@ -268,7 +283,7 @@ function scrollAnimations(){
         
     } else {
         
-        $('.macBook').css({position: 'relative', top: '940px', left: '0px'});
+        $('.macBook').css({position: 'relative', top: '1340px', left: '0px'});
         fadeInContent($(window).scrollTop());
         
     }
