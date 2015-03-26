@@ -83,19 +83,25 @@
 
 #foodPlazaLogin {
     text-align:center;background-image: url('/images/foodplazaL.jpg');
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:0;
     
 }
 
 #facebookLogin {
     background-image: url('/images/facebookL.jpg');
+    border-radius:0;
 }
 
 #twitterLogin {
     background-image: url('/images/twitterL.jpg');
+    border-radius:0;
 }
 
 #googleLogin {
     background-image: url('/images/googleL.jpg');
+    border-top-right-radius:0;
+    border-top-left-radius:0;
 }
 
 
