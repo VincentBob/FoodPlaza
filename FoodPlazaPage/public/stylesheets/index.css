@@ -208,6 +208,8 @@ video#bgvid {
     //font-family:myThirdFont;
     font-family:mySeccondFont;
     font-size:26px;
+    text-align:center;
+    color:white;
     background-size:cover;
 }
 
