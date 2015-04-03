@@ -692,7 +692,7 @@ video#bgvid {
     margin-top:20px;
 }
 .videWindowDiv {
-    background-color:blue;
+    background-color:red;
 }
 
 .contentDiv1 {
@@ -731,6 +731,10 @@ video#bgvid {
     position: absolute;
 }
 
+.detailText {
+    display: none;
+    visibility: hidden;
+}
 .iCon {
     
     height: 180px;
