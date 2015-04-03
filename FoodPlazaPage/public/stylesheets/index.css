@@ -729,6 +729,7 @@ video#bgvid {
     width: 400px;
     height: 350px;
     position: absolute;
+    font-size:40px;
 }
 
 .detailText {
@@ -737,8 +738,8 @@ video#bgvid {
 }
 .iCon {
     
-    height: 180px;
-    width: 180px;
+    height: 260px;
+    width: 260px;
     margin: auto;
     background-size: contain;
     background-repeat: no-repeat;
