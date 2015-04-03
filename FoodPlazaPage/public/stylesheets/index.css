@@ -743,14 +743,9 @@ video#bgvid {
 
 html {
     height: 100vh;
-    overflow: hidden;
-    background-image:url('/images/munich_7.jpg');
-    background-size: cover;
-    background-position: center center;
 }
 body {
     height:100vh;
-    overflow: auto;
 }
 
 .header {
@@ -787,10 +782,11 @@ body {
     height:100%;
     z-index:-100;
     position:fixed;
-    //background-color:black;
-    //background-image:url('/images/munich_7.jpg');
+    background-color:black;
+    background-image:url('/images/munich_7.jpg');
     background-size:cover;
     background-position: center center;
+    overflow:auto;
 }
 
 .registerButton {
