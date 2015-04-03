@@ -16,7 +16,7 @@ function setDimensions(){
         document.getElementById('restaurantButton').remove();
         document.getElementById('driverButton').remove();
         
-        //window.scrollBy(0,1);
+        $('.mobileBack').height(jQuery(window).height() + 60);
         
         $('.headerLineRight').css('border-bottom-width', '0px');
         $('.headerLineLeft').css('border-bottom-width', '0px');

@@ -623,7 +623,18 @@ video#bgvid {
         margin-top:20px;
     }
     .videWindowDiv {
-        background-color:blue;
+        //background-color:blue;
+    }
+    
+    .mobileBack {
+        width:100%;
+        height:100vh;
+        z-index:-100;
+        position:fixed;
+        background-color:black;
+        background-image:url('/images/munich_7.jpg');
+        background-size:cover;
+        background-position: center center;
     }
     
     .contentDiv1 {
@@ -684,6 +695,10 @@ video#bgvid {
         margin:15px;
         margin-top:50px;
     }
+    
+    .footer {
+        height:auto;
+    }
  
 }
 
@@ -716,11 +731,7 @@ video#bgvid {
     margin-top:20px;
 }
 .videWindowDiv {
-    //background-color:red;
-    //background-image:url('/images/vidBack.jpg');
-    //background-image:url('/images/munich_7.jpg');
-    //background-size:cover;
-    //background-position: center center;
+
 }
 
 .mobileBack {
