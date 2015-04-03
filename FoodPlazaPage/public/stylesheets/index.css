@@ -103,6 +103,18 @@
     border-bottom-width:1px;
 }
 
+#registerButton {
+    background-color: #FF6961;
+    color:white;
+    left:140px;
+}
+
+#loginButton {
+    background-color: transparent;
+    color:#FF6961;
+    left:2px;
+}
+
 .advertisementT {
     
     height:30px;
@@ -261,7 +273,8 @@ video#bgvid {
     
     position: relative;
     width:100%;min-width:1000px;
-    height:400px;
+    background-color:rgba(0, 0, 0, 0.82);
+    height:1850px;
 }
 
 .centerDiv {
@@ -313,6 +326,19 @@ video#bgvid {
     margin: auto;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+#contentText_1 {
+    top:150px;
+}
+#contentText_2 {
+    top:550px;
+}
+#contentText_3 {
+    top:950px;
+}
+#contentText_4 {
+    top:1350px;
 }
 
 .contentText {
@@ -422,6 +448,13 @@ video#bgvid {
     margin:10px;
     margin-top:70px;
     cursor:pointer;
+}
+
+#socialContainer {
+    height:auto;
+    overflow:auto;
+    width:400px;
+    margin:auto;
 }
 
 .footer {
@@ -545,18 +578,181 @@ video#bgvid {
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 900px){
  
+ 
+ 
+ #registerButton {
+     background-color: #FF6961;
+     color:white;
+     left:50%;
+     margin-left:-40px;
+ }
+ 
+ #loginButton {
+     background-color: transparent;
+     color:#FF6961;
+     left:2px;
+     left:50%;
+     margin-left:-300px;
+ }
+ 
+    .leftIconButton {
+        width:280px;
+        height:50px;
+        line-height:50px;
+        font-size:28px;
+        margin-top:20px;
+    }
     .videWindowDiv {
         background-color:blue;
+    }
+    
+    .contentDiv1 {
+        
+        height:1000px;
+    }
+    
+    #contentText_1 {
 
+        top:100px;
+        left:50%;
+        margin-left:-400px;
+    }
+    #contentText_2 {
+        
+        top:100px;
+        left:50%;
+        margin-left:0px;
+    }
+    #contentText_3 {
+
+        top:540px;
+        left:50%;
+        margin-left:-400px;
+    }
+    #contentText_4 {
+        
+        top:540px;
+        left:50%;
+        margin-left:0px;
+    }
+    
+    .contentText {
+        width: 400px;
+        height: 350px;
+        position: absolute;
+    }
+    
+    .iCon {
+        
+        height: 180px;
+        width: 180px;
+        margin: auto;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    
+    #socialContainer {
+        
+        width:721px;
+    }
+    
+    .socialIcon {
+        
+        width:150px; height:150px;
+        background-size:cover;
+        float:left;
+        margin:15px;
+        margin-top:50px;
     }
  
 }
 
 @media only screen and (min-device-width: 300px) and (max-device-width: 767px) {
 
-    .videWindowDiv {
-        background-color:red;
-    }
+#registerButton {
+    background-color: #FF6961;
+    color:white;
+    left:50%;
+    margin-left:-40px;
+}
+
+#loginButton {
+    background-color: transparent;
+    color:#FF6961;
+    left:2px;
+    left:50%;
+    margin-left:-300px;
+}
+
+.leftIconButton {
+    width:280px;
+    height:50px;
+    line-height:50px;
+    font-size:28px;
+    margin-top:20px;
+}
+.videWindowDiv {
+    background-color:blue;
+}
+
+.contentDiv1 {
+    
+    height:1030px;
+}
+
+#contentText_1 {
+    
+    top:100px;
+    left:50%;
+    margin-left:-400px;
+}
+#contentText_2 {
+    
+    top:100px;
+    left:50%;
+    margin-left:0px;
+}
+#contentText_3 {
+    
+    top:540px;
+    left:50%;
+    margin-left:-400px;
+}
+#contentText_4 {
+    
+    top:540px;
+    left:50%;
+    margin-left:0px;
+}
+
+.contentText {
+    width: 400px;
+    height: 350px;
+    position: absolute;
+}
+
+.iCon {
+    
+    height: 180px;
+    width: 180px;
+    margin: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#socialContainer {
+    
+    width:721px;
+}
+
+.socialIcon {
+    
+    width:150px; height:150px;
+    background-size:cover;
+    float:left;
+    margin:15px;
+    margin-top:50px;
+}
 
 }
 

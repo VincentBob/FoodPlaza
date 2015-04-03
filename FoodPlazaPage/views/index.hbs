@@ -5,8 +5,8 @@
 <div class="header">
     
     
-        <div class="advertisementButton" onClick="location.href='../restaurant'" style="color:white;margin-right:30px;">RESTAURANT</div>
-        <div class="advertisementButton" onClick="location.href='../driver'" style="color:white;">FAHRER</div>
+        <div id="restaurantButton" class="advertisementButton" onClick="location.href='../restaurant'" style="color:white;margin-right:30px;">RESTAURANT</div>
+        <div id="driverButton" class="advertisementButton" onClick="location.href='../driver'" style="color:white;">FAHRER</div>
         
         <!--
         <div class="cityIcon" style="right:20px; background-image: url('/images/frankfurt_1.png'); height:70px; width:140px; bottom:8px; font-size:18px; line-height:50px; border-width:1px; border-radius:6px;">Frankfurt</div>
@@ -17,8 +17,8 @@
         <div class="mainLogo"></div>
         <!--<div class="mainLogo2"></div>-->
     
-    <div class="leftIconButton" style="background-color: transparent; color:#FF6961;left:2px; " onClick="loadLoginForm()">ANMELDEN</div>
-    <div class="leftIconButton" style="background-color: #FF6961; color:white; left:140px; " onClick="loadsignupForm()">REGISTRIEREN</div>
+    <div class="leftIconButton" id="loginButton" onClick="loadLoginForm()">ANMELDEN</div>
+    <div class="leftIconButton" id="registerButton" onClick="loadsignupForm()">REGISTRIEREN</div>
 </div>
 
 <video autoplay loop poster="/images/StartingVideoPIC.png" id="bgvid">
@@ -50,7 +50,7 @@
 </div>
 </div>
 
-<div class="contentDiv1" style="background-color:rgba(0, 0, 0, 0.82); height:1850px;">
+<div class="contentDiv1" >
 
     <div id="centerDiv1" class="centerDiv">
         
@@ -67,14 +67,14 @@
         </div>
         
         
-        <div id="contentText_1" class="contentText" style="top:150px;">
+        <div id="contentText_1" class="contentText">
             <div class="iCon" style="background-image: url('/images/heart.png');"></div>
             YOU CHOOSE<!--DU WÄHLST--></br>
             <div class="detailText" >Bestelle bei einer Auswahl der angesagtesten Restaurants deiner Stadt!
             Lass uns gemeinsam ein Statement im Namen der guten Küche setzen und werde noch Heute Teil von FOOD PLAZA.
             </div>
         </div>
-        <div id="contentText_2" class="contentText" style="top:550px;">
+        <div id="contentText_2" class="contentText">
             <div class="iCon" style="background-image: url('/images/cook.png');"></div>
             THEY COOK<!--SIE KOCHEN--></br>
             <div class="detailText">
@@ -82,14 +82,14 @@
             Deine Bestellung wird stets frisch und mit liebe zubereitet.
             </div>
         </div>
-        <div id="contentText_3" class="contentText" style="top:950px;">
+        <div id="contentText_3" class="contentText" >
             <div class="iCon" style="background-image: url('/images/scooter.png');"></div>
             WE DELIVER<!--WIR LIEFERN--></br>
             <div class="detailText">Dank unserem inovativen logistic Systems glangt deine Bestellung schnell und
                 zuverlässig ans Ziel. Verfolge deine Bestellung via LIVE TRACKING und behalte die Übersicht über deinen Lieferststus.
             </div>
         </div>
-        <div id="contentText_4" class="contentText" style="top:1350px;">
+        <div id="contentText_4" class="contentText" >
             <div class="iCon" style="background-image: url('/images/fee.png');"></div>
             FIXED FEE<!--FIXE GEBÜHR--></br>
             <div class="detailText">Wir wollen nicht, dass du dein Geld mit unnötigen Liefergühren verschwendest-
@@ -103,7 +103,7 @@
 </div>
 
 <div class="footer">
-    <div style="height:auto; overflow:auto; width:400px; margin:auto;">
+    <div id="socialContainer">
     <div class="socialIcon" style="background-image:url('/images/F.jpg');" onclick="window.open('https://www.facebook.com/thedispatchery', '_new')"></div>
     <div class="socialIcon" style="background-image:url('/images/T.jpg');" onclick="window.open('https://twitter.com/thedispatchery', '_new')"></div>
     <div class="socialIcon" style="background-image:url('/images/I.jpg');" onclick="window.open('https://instagram.com/foodplaza.delivery/', '_new')"></div>

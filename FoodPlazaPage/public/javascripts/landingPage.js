@@ -13,6 +13,9 @@ function setDimensions(){
         
         document.getElementById('bgvid').remove();
         document.getElementById('macBook').remove();
+        document.getElementById('restaurantButton').remove();
+        document.getElementById('driverButton').remove();
+        
         
         $('.headerLineRight').css('border-bottom-width', '0px');
         $('.headerLineLeft').css('border-bottom-width', '0px');
