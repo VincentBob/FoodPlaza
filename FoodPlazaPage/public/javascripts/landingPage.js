@@ -16,6 +16,7 @@ function setDimensions(){
         document.getElementById('restaurantButton').remove();
         document.getElementById('driverButton').remove();
         
+        //window.scrollBy(0,1);
         
         $('.headerLineRight').css('border-bottom-width', '0px');
         $('.headerLineLeft').css('border-bottom-width', '0px');
@@ -398,9 +399,6 @@ window.onload = function dim(){
     setDimensions();
 
 };
-
-
-
 
 
 

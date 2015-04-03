@@ -728,6 +728,7 @@ video#bgvid {
     height:100vh;
     z-index:-100;
     position:fixed;
+    background-color:black;
     background-image:url('/images/munich_7.jpg');
     background-size:cover;
     background-position: center center;
@@ -769,6 +770,11 @@ video#bgvid {
     height:200px;
     width:360px;
     margin-right:-380px;
+}
+
+.infoStrip {
+    
+    height:220px;
 }
 
 .detailsHeader {
