@@ -208,21 +208,34 @@ video#bgvid {
 
 .cityIcon {
     
-    width:180px;
-    height:90px;
+    width:150px;
+    height:80px;
     position:absolute;
-    bottom:20px;
+    bottom:70px;
     border-style:solid;
     border-width:1px;
     border-color:white;
-    line-height:60px;
-    border-radius:10px;
+    line-height:50px;
+    border-radius:6px;
     //font-family:myThirdFont;
     font-family:mySeccondFont;
-    font-size:26px;
+    font-size:20px;
     text-align:center;
     color:white;
     background-size:cover;
+}
+
+
+#munich {
+        left:50%;
+        margin-left:-160px;
+        background-image: url('/images/munich_1.png');
+}
+
+#frankfurt {
+    right:50%;
+    margin-right:-160px;
+    background-image: url('/images/frankfurt_1.png');
 }
 
 .loginFormDiv {
@@ -669,30 +682,76 @@ video#bgvid {
 
 @media only screen and (min-device-width: 300px) and (max-device-width: 767px) {
 
+
+.header {
+    
+    height:138px;
+}
+
 #registerButton {
     background-color: #FF6961;
     color:white;
-    left:50%;
-    margin-left:-40px;
+    left:48%;
 }
 
 #loginButton {
     background-color: transparent;
     color:#FF6961;
     left:2px;
-    left:50%;
-    margin-left:-300px;
+    left:0;
 }
 
 .leftIconButton {
-    width:280px;
-    height:50px;
-    line-height:50px;
-    font-size:28px;
+    width:48%;
+    height:100px;
+    line-height:100px;
+    font-size:50px;
     margin-top:20px;
 }
 .videWindowDiv {
     background-color:red;
+}
+
+.registerButton {
+ 
+ width:800px;
+ height:200px;
+ left:50%;
+ margin-left:-400px;
+ top:40%;
+ font-size:90px;
+ line-height:200px;
+}
+
+.sloganDiv{
+    display: none;
+    visibility: hidden;
+}
+
+.cityIcon {
+    
+    border-width:5px;
+    line-height:60px;
+    border-radius:10px;
+    font-size:60px;
+    line-height:140px;
+}
+
+#munich {
+    height:200px;
+    width:360px;
+    margin-left:-380px;
+}
+
+#frankfurt {
+    height:200px;
+    width:360px;
+    margin-right:-380px;
+}
+
+.detailsHeader {
+    display: none;
+    visibility: hidden;
 }
 
 .contentDiv1 {
