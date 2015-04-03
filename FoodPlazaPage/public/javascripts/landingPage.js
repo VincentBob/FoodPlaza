@@ -9,22 +9,43 @@ function setDimensions(){
     fensterHoehe = $( window ).height();
     fensterBreite = $( window ).width();
     
-    scrollAnimations();
-    
-    if ($(window).scrollTop()<610) {
-    
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        
+        document.getElementById('bgvid').remove();
+        document.getElementById('macBook').remove();
+        
+        $('.headerLineRight').css('border-bottom-width', '0px');
+        $('.headerLineLeft').css('border-bottom-width', '0px');
+        $('.header').css('border-bottom-width', '1px');
+        $('.mainLogo').css('opacity', '0');
+        $('.mainLogo').css('height', '0');
+        
+        $('.registerButton').css('opacity', '1');
+        $('.sloganDiv').css('opacity', '1');
+        
         $('#contentText_1').css({opacity: 1});
-        $('#contentText_2').css({opacity: 0});
-        $('#contentText_3').css({opacity: 0});
-        $('#contentText_4').css({opacity: 0});
-        
-    } else if ($(window).scrollTop() > 1800) {
-        
-        $('#contentText_1').css({opacity: 0});
-        $('#contentText_2').css({opacity: 0});
-        $('#contentText_3').css({opacity: 0});
+        $('#contentText_2').css({opacity: 1});
+        $('#contentText_3').css({opacity: 1});
         $('#contentText_4').css({opacity: 1});
         
+    }else{
+        scrollAnimations();
+        
+        if ($(window).scrollTop()<610) {
+            
+            $('#contentText_1').css({opacity: 1});
+            $('#contentText_2').css({opacity: 0});
+            $('#contentText_3').css({opacity: 0});
+            $('#contentText_4').css({opacity: 0});
+            
+        } else if ($(window).scrollTop() > 1800) {
+            
+            $('#contentText_1').css({opacity: 0});
+            $('#contentText_2').css({opacity: 0});
+            $('#contentText_3').css({opacity: 0});
+            $('#contentText_4').css({opacity: 1});
+            
+        }
     }
     
 };
@@ -340,9 +361,13 @@ $( window ).resize(function(){
 
 window.onload = setTimeout(function() {
                            
-                           setDimensions(),
-                           signInButtonOnLoad(),
-                           screenAnimation()
+                           if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                                // DO SOMETHING
+                           }else{
+                                setDimensions(),
+                                signInButtonOnLoad(),
+                                screenAnimation()
+                           }
                            
                            }, 1200);
 
@@ -356,7 +381,11 @@ window.setInterval(function () {
 
 window.onscroll = function windowScrolled(){
     
-    scrollAnimations();
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        // DO SOMETHING
+    }else{
+        scrollAnimations();
+    }
     
 };
 
