@@ -10,9 +10,197 @@ background-color:#FF6961;
 color:white;
 cursor:pointer;
 font-size: 25px; text-align: center;
-font-family: mySeccondFont;
+font-family: theFont;
 border-radius: 2px;
-line-height:55px;
+line-height:50px;
 margin-top:100px;
 
 }
+
+.logoutButton {
+    
+    width:150px;
+    height:30px;
+    cursor:pointer;
+    font-size: 15px; text-align: center;
+    font-family: theFont;
+    border-radius: 2px;
+    position:absolute;
+    line-height:30px;
+    top:0px;
+    right:40px;
+    background-color:#FF6961;
+}
+
+.timerDiv {
+    
+    height:120px;
+    width:680px;
+    position:relative;
+    margin:0 auto;
+    color:white;
+    font-size:80px;
+    text-align:center;
+    line-height:100px;
+    font-family: theFont;
+}
+
+
+
+/* entire container, keeps perspective */
+.flip-container {
+    
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -ms-perspective: 1000;
+    perspective: 1000;
+    
+    -ms-transform: perspective(1000px);
+    -moz-transform: perspective(1000px);
+    
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    
+    height:100px;
+    width:55px;
+    background-color:white;
+    margin-left:2px;
+    border-radius:15px;
+    border-style:solid;
+    border-width:2px;
+    color:black;
+    border-color:black;
+    
+}
+/* flip the pane when hovered */
+.flip-container:hover .flipper, .flip-container.hover .flipper {
+    
+    //transform: rotateY(180deg);
+    //-webkit-transform: rotateY(180deg);
+    //-ms-transform: rotateY(180deg);
+    transform: rotateX(-180deg);
+    -webkit-transform: rotateX(-180deg);
+    -ms-transform: rotateX(-180deg);
+    
+}
+
+/* flip speed goes here */
+.flipper {
+    
+    transition: 0.6s;
+    -webkit-transition: 0.6s;
+    
+    transform-style: preserve-3d;
+    -webkit-transform-style:preserve-3d;
+    -ms-transform-style:preserve-3d;
+    position: relative;
+    
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    
+    position: absolute;
+    color:black;
+    top: 0;
+    left: 0;
+    height:50px;
+    width:55px;
+    overflow:hidden;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index: 10;
+    /* for firefox 31 */
+    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    
+    background-color:white;
+    background-size:cover;
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+    
+    //background-color:red;
+
+}
+
+/* back, initially hidden pane */
+.back {
+    
+    z-index:5;
+    
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    
+    background-color:white;
+    background-size:cover;
+    border-bottom-left-radius:15px;
+    border-bottom-right-radius:15px;
+    line-height:0px;
+}
+
+.backgDigit {
+    
+    height:50px;
+    width:55px;
+    color:black;
+    position:absolute;
+    z-index:-1;
+    top:0;
+    left:0;
+    background-color:white;
+    border-top-left-radius:15px;
+    border-top-right-radius:15px;
+    overflow:hidden;
+}
+
+.backgDigitBottom{
+    
+    height:100px;
+    width:55px;
+    color:black;
+    position:absolute;
+    z-index:-2;
+    top:0px;
+}
+
+.vertical.flip-container {
+    position: relative;
+    float:left;
+}
+
+.vertical .back {
+    transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+    -ms-transform: rotateX(180deg);
+}
+
+.vertical.flip-container .flipper {
+    transform-origin: 100% 50px; /* half of height */
+    -webkit-transform-origin: 100% 50px;
+    -ms-transform-origin: 100% 50px;
+}
+
+.vertical.flip-container:hover .flipper {
+    transform: rotateX(-180deg);
+    -webkit-transform: rotateX(-180deg);
+    -ms-transform: rotateX(-180deg);
+}
+
+@font-face {
+    font-family: theFont;
+    src: url('/fonts/Montserrat-Regular.ttf');
+    
+}
+
+
+
+
+
+

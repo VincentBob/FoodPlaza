@@ -5,18 +5,190 @@
 </head>
 
 
-<div class="contentDiv1" style="background-color:black; height:100vh; top:0;">
-    <div class="centerDiv" style="background-color:black;">
+<div class="contentDiv1" style="background-image:url('/images/munich_7.jpg'); background-size:cover; height:100vh; top:0; position:relative; overflow:auto;">
+    <div class="centerDiv" style="background-color:clear; position:relative; overflow:auto;">
 
-        <div style="margin-top: 100px; overflow:auto; position:relative; height:200px; width:100%;">
-            <p style="overflow:auto;">
-                Welcome <strong>{{user.email}} - {{user.userid}}</strong>
-                <a href="/signout" title="sign out">sign out</a>
+        <div style="margin-top: 100px; overflow:auto; position:relative; height:150px; width:100%; text-align:left; text-transform: capitalize;">
+            <p style="padding-left:40px;">
+                 Willkommen {{user.firstname}}</br><span style="text-transform: none;"> {{user.email}} - ( {{user.userid}} )</span>
             </p>
+            
+            <div class="logoutButton" onclick="location.href='/signout';">Sign Out</div>
+            <!--<div class="logoutButton" onclick="document.querySelector('#flip-container_1').classList.toggle('hover');">Sign Out</div>-->
+            
         </div>
+        <!--
         <div onclick="location.href='/order/{{user.userid}}';" class="orderButton">Bestellen</div>
+        -->
+        
+        <div class="timerDiv" style="height:80px; font-size:30px; line-height:40px; ">
+            Die Uhr läuft ! In wenigen Tagen leifern Wir !
+        </div>
+        <div class="timerDiv">
 
+               <!--<div style="width:100%; height:2px; background-color:black; position:absolute; top:50px; z-index:100;"></div>-->
+               
+               <div style="width:58px; left:2px; height:2px; background-color:black; position:absolute; top:50px; z-index:100;"></div>
+               <div style="width:58px; left:64px; height:2px; background-color:black; position:absolute; top:50px; z-index:100;"></div>
+               
+               <div style="width:58px; left:184px; height:2px; background-color:black; position:absolute; top:50px; z-index:100;"></div>
+               <div style="width:58px; left:246px; height:2px; background-color:black; position:absolute; top:50px; z-index:100;"></div>
+               
+               <div style="width:58px; left:366px; height:2px; background-color:black; position:absolute; top:50px; z-index:100;"></div>
+               <div style="width:58px; left:428px; height:2px; background-color:black; position:absolute; top:50px; z-index:100;"></div>
+               
+               <div style="width:58px; left:548px; height:2px; background-color:black; position:absolute; top:50px; z-index:100;"></div>
+               <div style="width:58px; left:610px; height:2px; background-color:black; position:absolute; top:50px; z-index:100;"></div>
+               
+               
+               <div id="flip-container_01" class="flip-container vertical" ontouchstart="this.classList.toggle('hover');">
+                   
+                   <div class="flipper">
+                       
+                       <div id="front_01" class="front">
+                           0
+                
+                       </div>
+                       <div id="back_01" class="back">
+                           0
+                
+                       </div>
+                       
+                   </div>
+                   
+                   <div id="backgDigit_01" class="backgDigit">0</div>
+                   <div id="backgDigitBottom_01" class="backgDigitBottom" >0</div>
+                   
+               </div>
+               
+               <div id="flip-container_02" class="flip-container vertical" ontouchstart="this.classList.toggle('hover');">
+                   <div class="flipper">
+                       <div id="front_02" class="front">
+                           0
+                
+                       </div>
+                       <div id="back_02" class="back">
+                           0
+                           
+                       </div>
+                   </div>
+                   <div id="backgDigit_02" class="backgDigit">0</div>
+                   <div id="backgDigitBottom_02" class="backgDigitBottom" >0</div>
+               </div>
+               
+               <div style="width:60px; height:100%; float:left; line-height:80px;">:</div>
+            
+               <div id="flip-container_1" class="flip-container vertical" ontouchstart="this.classList.toggle('hover');">
+                   
+                   <div class="flipper">
+                       
+                       <div id="front_1" class="front">
+                           0
+                           <!-- front content -->
+                       </div>
+                       <div id="back_1" class="back">
+                           0
+                           <!-- back content -->
+                       </div>
+
+                   </div>
+                   
+                   <div id="backgDigit_1" class="backgDigit">0</div>
+                   <div id="backgDigitBottom_1" class="backgDigitBottom" >0</div>
+                   
+               </div>
+               
+               <div id="flip-container_2" class="flip-container vertical" ontouchstart="this.classList.toggle('hover');">
+                   <div class="flipper">
+                       <div id="front_2" class="front">
+                           0
+                           <!-- front content -->
+                       </div>
+                       <div id="back_2" class="back">
+                           0
+                           <!-- back content -->
+                       </div>
+                   </div>
+                   <div id="backgDigit_2" class="backgDigit">0</div>
+                   <div id="backgDigitBottom_2" class="backgDigitBottom" >0</div>
+               </div>
+               
+               <div style="width:60px; height:100%; float:left; line-height:80px;">:</div>
+               
+               <div id="flip-container_3" class="flip-container vertical" ontouchstart="this.classList.toggle('hover');">
+                   <div class="flipper">
+                       <div id="front_3" class="front">
+                           0
+                           <!-- front content -->
+                       </div>
+                       <div id="back_3" class="back">
+                           0
+                           <!-- back content -->
+                       </div>
+                   </div>
+                   <div id="backgDigit_3" class="backgDigit">0</div>
+                   <div id="backgDigitBottom_3" class="backgDigitBottom" >0</div>
+               </div>
+               <div id="flip-container_4" class="flip-container vertical" ontouchstart="this.classList.toggle('hover');">
+                   <div class="flipper">
+                       <div id="front_4" class="front">
+                           0
+                           <!-- front content -->
+                       </div>
+                       <div id="back_4" class="back">
+                           0
+                           <!-- back content -->
+                       </div>
+                   </div>
+                   <div id="backgDigit_4" class="backgDigit">0</div>
+                   <div id="backgDigitBottom_4" class="backgDigitBottom" >0</div>
+               </div>
+
+              <div style="width:60px; height:100%; float:left; line-height:80px;">:</div>
+              
+              
+              <div id="flip-container_5" class="flip-container vertical" ontouchstart="this.classList.toggle('hover');">
+                  <div class="flipper">
+                      <div id="front_5" class="front">
+                          0
+                          <!-- front content -->
+                      </div>
+                      <div id="back_5" class="back">
+                          0
+                          <!-- back content -->
+                      </div>
+                  </div>
+                  <div id="backgDigit_5" class="backgDigit">0</div>
+                  <div id="backgDigitBottom_5" class="backgDigitBottom" >0</div>
+              </div>
+              <div id="flip-container_6" class="flip-container vertical" ontouchstart="this.classList.toggle('hover');">
+                  <div class="flipper">
+                      <div id="front_6" class="front">
+                          0
+                          <!-- front content -->
+                      </div>
+                      <div id="back_6" class="back">
+                          0
+                          <!-- back content -->
+                      </div>
+                  </div>
+                  <div id="backgDigit_6" class="backgDigit">0</div>
+                  <div id="backgDigitBottom_6" class="backgDigitBottom" >0</div>
+              </div>
+
+
+        </div>
+        <div class="timerDiv" style="height:25px; font-size:18px; line-height:20px;">
+            <div style="margin-left: 10px; width:110px; height:20px; float:left; position:relative;">Tage</div>
+            <div style="margin-left:72px; width:110px; height:20px; float:left; position:relative;">Stunden</div>
+            <div style="margin-left:72px; width:110px; height:20px; float:left; position:relative;">Minuten</div>
+            <div style="margin-left:72px; width:110px; height:20px; float:left; position:relative;">Sekunden</div>
+        </div>
+        
+        <div class="timerDiv" style="height:80px; font-size:15px; line-height:100px; ">
+            Sei einer der 100 ersten, und bekomme 100 Euro auf deine Bestellung gutgeschrieben !
+        </div>
+ 
     </div>
-
 </div>
 
