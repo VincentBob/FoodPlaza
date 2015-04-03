@@ -639,13 +639,13 @@ video#bgvid {
     
     .registerButton {
         
-        width:600px;
-        height:100px;
+        width:500px;
+        height:80px;
         left:50%;
-        margin-left:-300px;
+        margin-left:-250px;
         top:42%;
         font-size:50px;
-        line-height:100px;
+        line-height:80px;
         border-radius:10px;
     }
     
@@ -784,13 +784,13 @@ video#bgvid {
 
 .registerButton {
  
- width:800px;
- height:200px;
+ width:700px;
+ height:160px;
  left:50%;
- margin-left:-400px;
+ margin-left:-350px;
  top:36%;
- font-size:90px;
- line-height:200px;
+ font-size:86px;
+ line-height:160px;
  border-radius:10px;
 }
 
