@@ -80,6 +80,10 @@
     line-height:50px;
     margin-left:80px;
     margin-top:200px;
+    background-image: url('/images/close.png');
+    background-repeat:no-repeat;
+    background-size:contain;
+    
 }
 
 .sliderSubmitButton {

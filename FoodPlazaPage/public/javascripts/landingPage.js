@@ -54,109 +54,48 @@ function setDimensions(){
 
 function animateOpacity(id,speed,opac) {
     
-    $('.' + id).animate({opacity:opac}, speed, 'linear',
-                           function(){
-                           });
+    
+    $('.' + id).animate({opacity:opac} , { duration: speed, queue: false });
+
 }
 
 function animateOpacityWithID(id,speed,opac) {
     
-    $('#' + id).animate({opacity:opac}, speed, 'linear',
-                        function(){
-                        });
+    $('#' + id).animate({opacity:opac} , { duration: speed, queue: false });
 }
 
 
+function loadFrom(id) {
 
-function bHTML() {
-    
-    var element = document.createElement("p");
-    element.innerHTML = '<form method="post" action="/login"><p><div class="loginFormText" style="top:40px;">e-Mail:</div><input type="email" name="email" id="email" placeholder="e-Mail" required="true" class="loginFormTextField" style="top:40px;"/></p><p><div class="loginFormText" style="top:70px;">Passwort:</div><input type="password" name="password" id="password" placeholder="Passwort" required="true" class="loginFormTextField" style="top:70px;"/></p><p><input type="submit" name="login" id="login" class="loginEnterButton" style="top:120px;" value="sign in"/></p><form/><div class="popUpCloseButton" onclick="unLoadLoginForm();">X</div>';
-    return element;
-    
-};
+    animateOpacity('formElements',0,0);
 
-function signupHTML() {
+    $('#loginFormDiv').css("visibility", "hidden");
+    $('#loginFormDiv').css("display", "none");
     
-    var element = document.createElement("p");
-    element.innerHTML = '<form method="post" action="/signup"><p><div class="loginFormText" style="top:30px;">Name:</div><input type="text" name="firstname" id="firstname" placeholder="Name" required="true" class="loginFormTextField" style="top:30px;"/></p><p><div class="loginFormText" style="top:60px;">Nachname:</div><input type="text" name="lastname" id="lastname" placeholder="Nachname" required="true" class="loginFormTextField" style="top:60px;"></p><p><div class="loginFormText" style="top:90px;">e-Mail:</div><input type="email" name="email" id="email" placeholder="e-Mail" required="true" class="loginFormTextField" style="top:90px;"></p><p><div class="loginFormText" style="top:120px;">Mobilnummer:</div><input type="tel" name="mobile" id="mobile" placeholder="Mobilnummer" required="true" class="loginFormTextField" style="top:120px;"></p><p><div class="loginFormText" style="top:150px;">Passwort:</div><input type="password" onchange="if(this.checkValidity()) form.password_2.pattern = this.value;"  name="password" id="password" placeholder="Passwort" required="true" class="loginFormTextField" style="top:150px;"></p><p><div class="loginFormText" style="top:180px;">* Passwort:</div><input type="password" name="password_2" id="password_2" title="Passwort Bestätigung stimmt nicht überein!" placeholder="* Passwort" required="true" class="loginFormTextField" style="top:180px;"></p>    <p><div class="loginFormText" style="top:210px;">Straße:</div><input type="text" name="street" id="street" placeholder="Straße" required="true" class="loginFormTextField" style="top:210px;"></p><p><div class="loginFormText" style="top:240px;">Hausnummer:</div><input type="text" name="housenumber" id="housenumber" placeholder="Hausnummer" required="true" class="loginFormTextField" style="top:240px;"></p><p><div class="loginFormText" style="top:270px;">Postleitzahl:</div><input type="number" name="postalcode" id="postalcode" placeholder="Postleitzahl" required="true" class="loginFormTextField" style="top:270px;"></p><p><div class="loginFormText" style="top:300px;">Stadt:</div><input type="text" name="city" id="city" placeholder="Stadt" required="true" class="loginFormTextField" style="top:300px;"></p><p><input class="loginEnterButton" type="submit" name="signup" id="signup" value="Sign Up" style="top:340px; "/></p></form><div class="popUpCloseButton" onclick="unLoadLoginForm();">X</div>';
-    return element;
+    $('#registerFormDiv').css("visibility", "hidden");
+    $('#registerFormDiv').css("display", "none");
+    
+    $('#OrderFormDiv').css("visibility", "hidden");
+    $('#OrderFormDiv').css("display", "none");
+    
+    $('#' + id ).css("visibility", "visible");
+    $('#' + id ).css("display", "inline");
+    
+    animateOpacity('formElements',1700,1);
 
-    
-};
-
-function registerHTML() {
-    
-    var element = document.createElement("p");
-    
-    element.innerHTML = '<div class="signUpDiv"><div class="signUpButton" id="foodPlazaLogin" onClick="loadsignupForm()">Registrieren</div><div id="facebookLogin" class="signUpButton">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign in with Facebook</div><div id="twitterLogin" class="signUpButton">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign in with Twitter</div><div id="googleLogin" class="signUpButton">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sign in with Google</div></div><div class="popUpCloseButton" onclick="unLoadLoginForm();">X</div>';
-    return element;
-    
-};
-
-function loadLoginForm(){
-    
-    document.getElementById("loginFormDiv").innerHTML = "";
-    document.getElementById("loginFormDiv").style.height="200px";
-    document.getElementById("loginFormDiv").style.opacity="1";
-    document.getElementById("loginFormDiv").style.top="50%";
-    document.getElementById("loginFormDiv").style.marginTop="-100px";
-    
-    var theDiv = document.getElementById("loginFormDiv");
-    theDiv.appendChild(bHTML());
-    
-    animateOpacity('loginFormText',1700,1);
-    animateOpacity('loginEnterButton',1700,1);
-    animateOpacity('loginFormTextField',1700,1);
-    animateOpacity('popUpCloseButton',1700,1);
-    
-};
-
-function unLoadLoginForm(){
-    
-    animateOpacity('loginFormText',800,0);
-    animateOpacity('loginEnterButton',800,0);
-    animateOpacity('loginFormTextField',800,0);
-    animateOpacity('popUpCloseButton',800,0);
-    
-    setTimeout(function() { document.getElementById("loginFormDiv").style.height="0px"; }, 900);
-    setTimeout(function() { document.getElementById("loginFormDiv").innerHTML = ""; }, 900);
-    setTimeout(function() { animateOpacity('loginFormDiv', 800,0); }, 100);
-};
-
-function loadsignupForm() {
-    
-    document.getElementById("loginFormDiv").innerHTML = "";
-    document.getElementById("loginFormDiv").style.height="410px";//"50vh";
-    document.getElementById("loginFormDiv").style.opacity="1";
-    document.getElementById("loginFormDiv").style.top="50%";
-    document.getElementById("loginFormDiv").style.marginTop="-205px";//"-25vh";
-    
-    var theDiv = document.getElementById("loginFormDiv");
-    theDiv.appendChild(signupHTML());
-    
-    animateOpacity('loginFormText',1700,1);
-    animateOpacity('loginEnterButton',1700,1);
-    animateOpacity('loginFormTextField',1700,1);
-    animateOpacity('popUpCloseButton',1700,1);
-    
 }
 
-function openSignUpDiv() {
+
+function unLoadForm(id){
     
-    document.getElementById("loginFormDiv").innerHTML = "";
-    document.getElementById("loginFormDiv").style.height="410px";//"50vh";
-    document.getElementById("loginFormDiv").style.opacity="1";
-    document.getElementById("loginFormDiv").style.top="50%";
-    document.getElementById("loginFormDiv").style.marginTop="-205px";//"-25vh";
+    animateOpacity('formElements',800,0);
+    animateOpacity('loginFormDiv',1000,0);
     
-    var theDiv = document.getElementById("loginFormDiv");
-    theDiv.appendChild(registerHTML());
-    
-    animateOpacity('signUpButton',1700,1);
-    animateOpacity('popUpCloseButton',1700,1);
-    
-}
+    setTimeout(function() { $('#' + id).css("visibility", "hidden"); }, 1000);
+    setTimeout(function() { $('#' + id).css("display", "none"); }, 1000);
+    setTimeout(function() { animateOpacity('loginFormDiv',0,1); }, 1010);
+   
+};
 
 function signInButtonOnLoad() {
     
