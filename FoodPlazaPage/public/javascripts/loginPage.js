@@ -30,9 +30,6 @@ var old_h2 = -1;
 var old_m2 = -1;
 var old_s2 = -1;
 
-var fh1 = 1;
-var fh2 = 9;
-
 var fm1 = 5;
 var fm2 = 9;
 
@@ -49,11 +46,10 @@ function startTime() {
     var W1 = Number(String('00' + Days).substr(-2,1));
     var W2 = Number(String('00' + Days).substr(-1,1));
     
-    //var W1 = Number(String('00' + today.getMonth()).substr(-2,1));
-    //var W2 = Number(String('00' + today.getMonth()).substr(-1,1));
+    var counterHour = 24 - today.getHours();
     
-    var h1 = Number(String('00' + today.getHours()).substr(-2,1));
-    var h2 = Number(String('00' + today.getHours()).substr(-1,1));
+    var h1 = Number(String('00' + counterHour).substr(-2,1));
+    var h2 = Number(String('00' + counterHour).substr(-1,1));
     
     var m1 = Number(String('00' + today.getMinutes()).substr(-2,1));
     var m2 = Number(String('00' + today.getMinutes()).substr(-1,1));
@@ -74,13 +70,13 @@ function startTime() {
     
     if (old_h1 != h1) {
         //changeCounter(1,9);
-        changeCounter(1,fh1-h1);
+        changeCounter(1,h1);
         old_h1 = h1;
     }
     
     if (old_h2 != h2) {
         //changeCounter(2,9);
-        changeCounter(2,fh2-h2);
+        changeCounter(2,h2);
         old_h2 = h2;
     }
     
