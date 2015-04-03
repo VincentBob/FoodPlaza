@@ -779,7 +779,7 @@ body {
 
 .mobileBack {
     width:100%;
-    height:100%;
+    height:100vh;
     z-index:-100;
     position:fixed;
     background-color:black;
