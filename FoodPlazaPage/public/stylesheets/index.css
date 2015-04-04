@@ -611,15 +611,13 @@ video#bgvid {
      background-color: #FF6961;
      color:white;
      left:50%;
-     margin-left:-40px;
  }
  
  #loginButton {
      background-color: transparent;
      color:#FF6961;
-     left:2px;
      left:50%;
-     margin-left:-300px;
+     margin-left:-280px;
  }
  
     .leftIconButton {
@@ -852,18 +850,17 @@ body {
 #registerButton {
     background-color: #FF6961;
     color:white;
-    left:48%;
+    left:50%;
 }
 
 #loginButton {
     background-color: transparent;
     color:#FF6961;
-    left:2px;
-    left:0;
+    left:3%;
 }
 
 .leftIconButton {
-    width:48%;
+    width:47%;
     height:100px;
     line-height:100px;
     font-size:50px;
@@ -891,15 +888,28 @@ body {
  height:160px;
  left:50%;
  margin-left:-350px;
- top:36%;
- font-size:76px;
+ top:48%;
+ font-size:74px;
  line-height:160px;
  border-radius:10px;
 }
 
 .sloganDiv{
+    
+    top:26%;
+    font-size:90px;
+    background-image:url('/images/phoneLogo_2.png');
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    width:700px;
+    height:300px;
+    left:50%;
+    margin-left:-350px;
+    /*
     display: none;
     visibility: hidden;
+    */
 }
 
 .signUpButton {

@@ -30,6 +30,11 @@ function setDimensions(){
         $('#contentText_3').css({opacity: 1});
         $('#contentText_4').css({opacity: 1});
         
+        if(screen.width<768){
+            $('.sloganDiv').text("");
+        }
+        
+        
     }else{
         scrollAnimations();
         
@@ -74,7 +79,7 @@ function animateOpacityWithID(id,speed,opac) {
 
 function loadFrom(id) {
 
-    if( (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) && ( screen.width<768 ) ) {
+    if( (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
         $('body').css('position','fixed');
         $('body').css('overflow','hidden');
     };
@@ -100,7 +105,7 @@ function loadFrom(id) {
 
 function unLoadForm(id){
     
-    if( (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) && ( screen.width<768 ) ) {
+    if( (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))  ) { // && ( screen.width<768 )
         $('body').css('position','static');
         $('body').css('overflow','visible');
     };
