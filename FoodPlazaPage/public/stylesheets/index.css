@@ -542,12 +542,12 @@ video#bgvid {
     
     .detailsHeader {
         
-        background-position:10% center;
+        margin-top:17px;
+        background-position:20% center;
         background-size:contain;
-        
-        margin-top:14px;
-        height:35px;
+        height:30px;
         width:33%;
+        line-height:34px;
         text-align:center;
         font-size:18px;
     }
