@@ -502,7 +502,6 @@ video#bgvid {
 
 @font-face {
     font-family: mySeccondFont;
-    //src: url('/fonts/ADAM.CG PRO.otf');
     src: url('/fonts/pier.otf');
 }
 
@@ -698,6 +697,7 @@ video#bgvid {
         width:700px;
         left:50%;
         margin-left:-350px;
+        overflow:scroll;
     }
     
     #loginFormDiv {
