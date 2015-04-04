@@ -115,11 +115,20 @@
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 900px){
     
-    
-    .formElements {
-        margin-top:60px;
-    }
- 
+
+ .formElements {
+     background-color:rgba(0,0,0,0.89);
+     width:700px;
+     position:absolute;
+     left:50%;
+     margin-left:-350px;
+     padding-top:50px;
+     padding-bottom:70px;
+     border-radius:10px;
+     margin-top:20%;
+  }
+
+
  .loginFormTextField {
      
      width:300px;
@@ -138,8 +147,8 @@
      border-radius:30px;
      border-width:1px;
      line-height:30px;
-     left:20px;
-     bottom:20px;
+     left:30px;
+     bottom:30px;
  }
  
  .loginEnterButton {

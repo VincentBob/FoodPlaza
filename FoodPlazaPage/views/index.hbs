@@ -49,7 +49,7 @@
      <div class="loginFormText" style="top:70px;">Passwort:</div>
      -->
     <form id="login" method="post" action="/login" name="login">
-        <input type="email" name="email" id="email" placeholder="e-Mail" required="true" class="loginFormTextField"/>
+        <input type="email" name="email" id="email" placeholder="e-Mail" required="true" class="loginFormTextField" onFocus="resetFormPosition();"/>
         <input type="password" name="password" id="password" placeholder="Passwort" required="true" class="loginFormTextField"/>
         <input class="loginEnterButton" type="submit" name="login" id="login" value="sign in"/>
     <form/>
@@ -94,14 +94,12 @@
 
 <div id="OrderFormDiv" class="loginFormDiv">
     <div class="formElements">
-    <div class="signUpDiv">
         
         <div id="facebookLogin" class="signUpButton">Sign in with Facebook</div>
         <div id="twitterLogin" class="signUpButton">Sign in with Twitter</div>
         <div id="googleLogin" class="signUpButton">Sign in with Google</div>
         <div class="signUpButton" id="foodPlazaLogin" onClick="loadFrom('registerFormDiv')">Registrieren</div>
         
-    </div>
     <div class="popUpCloseButton" onclick="unLoadForm('OrderFormDiv');"></div>
     </div>
 </div>

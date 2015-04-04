@@ -52,6 +52,13 @@ function setDimensions(){
     
 };
 
+function resetFormPosition () {
+    
+    $('#loginFormDiv').css("position", "fixed");
+    $('#loginFormDiv').css("background-color", "red");
+    
+}
+
 function animateOpacity(id,speed,opac) {
     
     
