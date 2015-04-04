@@ -74,9 +74,9 @@ function loadFrom(id) {
     
     $('#registerFormDiv').css("visibility", "hidden");
     $('#registerFormDiv').css("display", "none");
-    
+        
     $('#OrderFormDiv').css("visibility", "hidden");
-    $('#OrderFormDiv').css("display", "none");
+    $('#OrderFormDiv').css("display", "none");    
     
     $('#' + id ).css("visibility", "visible");
     $('#' + id ).css("display", "inline");

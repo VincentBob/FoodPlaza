@@ -1,8 +1,9 @@
 
 
 .formElements {
+    margin-top:25px;
     width:100%;
-    height:100%;
+    height:auto;
     opacity:0;
 }
 
@@ -31,7 +32,9 @@
 
 .loginEnterButton {
     
-    height:40px;//height:0px;
+    -webkit-appearance: none;
+    -moz-appearance:none;
+    height:40px;
     width:220px;
     background-color:#FF6961;
     cursor:pointer;
@@ -41,11 +44,11 @@
     font-family: mySeccondFont;
     border-radius: 2px;
     line-height:45px;
-    position:absolute;
-    left:240px;
+    position:relative;
+    margin-left:190px;
     border-width:0px;
     border:none;
-    margin-bottom:20px;
+    margin-top:10px;
 }
 
 .loginFormText {
@@ -69,8 +72,8 @@
     
     width:220px;
     height:25px;
-    position:absolute;
-    left:240px;
+    position:relative;
+    margin-left:190px;
     background-color:rgba(255,255,255,0.2);
     border-radius:4px;
     opacity:1;
@@ -81,6 +84,8 @@
     border-width:0px;
     border:none;
     text-align:center;
+    top:0px;
+    margin-top:10px;
 }
 
 
@@ -105,6 +110,49 @@
     background-image: url('/images/googleL.jpg');
     border-top-right-radius:0;
     border-top-left-radius:0;
+}
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 900px){
+    
+    
+    .formElements {
+        margin-top:60px;
+    }
+ 
+ .loginFormTextField {
+     
+     width:300px;
+     height:40px;
+     margin-left:200px;
+     border-radius:4px;
+     font-size:25px;
+     line-height:40px;
+     margin-top:15px;
+ }
+ 
+ .popUpCloseButton {
+     
+     width:60px;
+     height:60px;
+     border-radius:30px;
+     border-width:1px;
+     line-height:30px;
+     left:20px;
+     bottom:20px;
+ }
+ 
+ .loginEnterButton {
+     
+     height:60px;
+     width:300px;
+     font-size: 30px;
+     border-radius: 2px;
+     line-height:60px;
+     margin-left:200px;
+     margin-top:20px;
+ }
+ 
 }
 
 
