@@ -67,7 +67,7 @@ function animateOpacityWithID(id,speed,opac) {
 
 function loadFrom(id) {
 
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    if( (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) && ( screen.width<768 ) ) {
         $('body').css('position','fixed');
         $('body').css('overflow','hidden');
     };
@@ -93,7 +93,7 @@ function loadFrom(id) {
 
 function unLoadForm(id){
     
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    if( (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) && ( screen.width<768 ) ) {
         $('body').css('position','static');
         $('body').css('overflow','visible');
     };
