@@ -631,9 +631,19 @@ video#bgvid {
         font-size:28px;
         margin-top:20px;
     }
-    .videWindowDiv {
-        
-    }
+
+
+.videWindowDiv {
+    
+    font-size:40px;
+    line-height:30px;
+}
+
+.videWindowDiv span {
+    
+    font-size:25px;
+    line-height:-20px;
+}
     
     .mobileBack {
         width:100%;
@@ -857,6 +867,19 @@ body {
     visibility: hidden;
 }
 
+.signUpDiv {
+    margin-top:-280px;
+}
+
+.signUpButton {
+    
+    height:140px;
+    line-height:140px;
+    width:840px;
+    font-size:50px;
+    text-align:center;
+}
+
 .cityIcon {
     
     border-width:5px;
@@ -881,6 +904,7 @@ body {
 .loginFormDiv {
  
     left:0;
+    background-color:black;
     margin-left:0;
     width:100%;
     height:100%;
