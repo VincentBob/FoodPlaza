@@ -84,7 +84,7 @@
     position:relative;
     margin-right:15px;
     margin-top:30px;
-    line-height:35px;
+    line-height:30px;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     border-bottom-left-radius: 3px;
@@ -132,7 +132,7 @@
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     position:absolute;
-    line-height:35px;
+    line-height:30px;
     //top:35px;
     margin-top:31px;
 }
@@ -194,7 +194,7 @@ video#bgvid {
     color:white;
     font-size:26px;
     text-align:center;
-    line-height:58px;
+    line-height:50px;
     font-family:mySeccondFont;
     cursor:pointer;
     opacity:0;
@@ -502,7 +502,8 @@ video#bgvid {
 
 @font-face {
     font-family: mySeccondFont;
-    src: url('/fonts/pier.otf');
+    //src: url('/fonts/pier.otf');
+    src: url('/fonts/Montserrat-Regular.ttf');
 }
 
 @font-face {
@@ -535,13 +536,20 @@ video#bgvid {
     
     .infoStrip {
         
-        width:800px;
+        width:100%;
+        height:70px;
     }
     
     .detailsHeader {
         
         background-position:10% center;
-        width:266px;
+        background-size:contain;
+        
+        margin-top:14px;
+        height:35px;
+        width:33%;
+        text-align:center;
+        font-size:18px;
     }
     
     .macBook {
@@ -857,7 +865,7 @@ body {
  left:50%;
  margin-left:-350px;
  top:36%;
- font-size:86px;
+ font-size:76px;
  line-height:160px;
  border-radius:10px;
 }
