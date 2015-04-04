@@ -163,6 +163,7 @@
      height:160px;
      border-radius:180px;
      border-width:3px;
+     position:fixed;
  }
  
  .formElements {
