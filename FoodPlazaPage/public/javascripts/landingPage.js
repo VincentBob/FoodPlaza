@@ -80,8 +80,7 @@ function animateOpacityWithID(id,speed,opac) {
 function loadFrom(id) {
 
     if( (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ) {
-        $('body').css('position','fixed');
-        $('body').css('overflow','hidden');
+        $('.scrollWrapper').css('height','100vh');
     };
     
     animateOpacity('formElements',0,0);
@@ -105,9 +104,8 @@ function loadFrom(id) {
 
 function unLoadForm(id){
     
-    if( (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))  ) { // && ( screen.width<768 )
-        $('body').css('position','static');
-        $('body').css('overflow','visible');
+    if( (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))  ) {
+        $('.scrollWrapper').css('height','100%');
     };
     
     animateOpacity('formElements',800,0);
