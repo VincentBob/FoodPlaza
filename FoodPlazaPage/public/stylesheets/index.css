@@ -838,9 +838,11 @@ video#bgvid {
 }
 
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 900px) and (orientation: landscape) {
-
-
+/* @media only screen and (min-device-width: 768px) and (max-device-width: 900px) and (orientation: landscape) { */
+    
+@media only screen and (min-device-width: 768px) and (max-device-width: 900px) and (min-aspect-ratio: 13/9) {
+    
+    
 .scrollWrapper {
      
     height:100vh;
