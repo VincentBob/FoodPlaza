@@ -1,20 +1,22 @@
 
+/********************************************************************/
+/*                         DEFAULT (PC)                             */
+/********************************************************************/
 
 .orderButton{
 
-width:350px;
-height:50px;
-position:relative;
-margin: auto;
-background-color:#FF6961;
-color:white;
-cursor:pointer;
-font-size: 25px; text-align: center;
-font-family: theFont;
-border-radius: 2px;
-line-height:50px;
-margin-top:100px;
-
+    width:350px;
+    height:50px;
+    position:relative;
+    margin: auto;
+    background-color:#FF6961;
+    color:white;
+    cursor:pointer;
+    font-size: 25px; text-align: center;
+    font-family: theFont;
+    border-radius: 2px;
+    line-height:50px;
+    margin-top:100px;
 }
 
 .logoutButton {
@@ -74,14 +76,10 @@ margin-top:100px;
 }
 /* flip the pane when hovered */
 .flip-container:hover .flipper, .flip-container.hover .flipper {
-    
-    //transform: rotateY(180deg);
-    //-webkit-transform: rotateY(180deg);
-    //-ms-transform: rotateY(180deg);
+
     transform: rotateX(-180deg);
     -webkit-transform: rotateX(-180deg);
     -ms-transform: rotateX(-180deg);
-    
 }
 
 /* flip speed goes here */
@@ -124,9 +122,6 @@ margin-top:100px;
     background-size:cover;
     border-top-left-radius:15px;
     border-top-right-radius:15px;
-    
-    //background-color:red;
-
 }
 
 /* back, initially hidden pane */

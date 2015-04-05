@@ -1,10 +1,16 @@
+
+/********************************************************************/
+/*                         DEFAULT (PC)                             */
+/********************************************************************/
+
+
 .buttonRestaurant{
     height:50px;
     width:350px;
     margin:auto;
     background-color:#FF6961;
     position:relative;
-    top:43%;//top:56%;
+    top:43%;
     border-radius:2px;
     color:white;
     font-size:26px;
@@ -51,7 +57,6 @@
     margin:100px auto;
     overflow:hidden;
     min-width:1000px;
-    //background-color:red;
 }
 .restaurantHeader{
     position: relative;
@@ -59,7 +64,6 @@
     width:810px;
     height: 140px;
     margin: auto;
-    //background-color:green;
 }
 .restaurantHeaderElement{
     position: relative;
@@ -84,7 +88,6 @@
     line-height: 25px;
     overflow:hidden;
     float:left;
-    //background-color:blue;
 }
 .FS1{
     left: -35px;

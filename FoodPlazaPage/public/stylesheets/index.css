@@ -1,4 +1,10 @@
 
+
+/********************************************************************/
+/*                         DEFAULT (PC)                             */
+/********************************************************************/
+
+
 * {
     
     margin: 0;
@@ -106,12 +112,14 @@
 }
 
 #registerButton {
+    
     background-color: #FF6961;
     color:white;
     left:140px;
 }
 
 #loginButton {
+    
     background-color: transparent;
     color:#FF6961;
     left:2px;
@@ -140,7 +148,6 @@
     border-bottom-right-radius: 2px;
     position:absolute;
     line-height:30px;
-    //top:35px;
     margin-top:31px;
 }
 
@@ -156,7 +163,6 @@ video#bgvid {
 .videoSource {
     
     content:url("/videos/foodPlazaBackGround.mp4");
-
 }
 
 .videWindowDiv {
@@ -228,12 +234,14 @@ video#bgvid {
 
 
 #munich {
-        left:50%;
-        margin-left:-160px;
-        background-image: url('/images/munich_1.png');
+    
+    left:50%;
+    margin-left:-160px;
+    background-image: url('/images/munich_1.png');
 }
 
 #frankfurt {
+    
     right:50%;
     margin-right:-160px;
     background-image: url('/images/frankfurt_1.png');
@@ -250,26 +258,28 @@ video#bgvid {
     z-index:80;
     border-width:0;
     border-radius:10px;
-    
     display: none;
     visibility: hidden;
 }
 
 #loginFormDiv {
+    
     z-index:201;
-    height:200px;
+    height:170px;
     top:50%;
     margin-top:-100px;
 }
 
 #registerFormDiv {
+    
     z-index:201;
-    height:460px;
+    height:410px;
     top:50%;
     margin-top:-230px;
 }
 
 #OrderFormDiv {
+    
     z-index:201;
     height:280px;
     top:50%;
@@ -304,6 +314,7 @@ video#bgvid {
 }
 
 .mobileBack {
+    
     height:0;
     width:0;
 }
@@ -478,6 +489,7 @@ video#bgvid {
 }
 
 #socialContainer {
+    
     height:auto;
     overflow:auto;
     width:400px;
@@ -500,7 +512,6 @@ video#bgvid {
 
 @font-face {
     font-family: mySeccondFont;
-    //src: url('/fonts/pier.otf');
     src: url('/fonts/Montserrat-Regular.ttf');
 }
 
@@ -517,123 +528,132 @@ video#bgvid {
 }
 
 
-
+/********************************************************************/
+/*                            SMALL PC                              */
+/********************************************************************/
 
 @media only screen and (max-width: 1000px) {
     
     
-    .contentDiv1 {
+.contentDiv1 {
 
-        width:100%;min-width:800px;
-    }
+    width:100%;min-width:800px;
+}
     
-    .centerDiv {
+.centerDiv {
         
-        width:800px;
-    }
+    width:800px;
+}
+
+.infoStrip {
     
-    .infoStrip {
-        
-        width:100%;
-        height:70px;
-    }
+    width:100%;
+    height:70px;
+}
     
-    .detailsHeader {
+.detailsHeader {
         
-        margin-top:17px;
-        background-position:20% center;
-        background-size:contain;
-        height:30px;
-        width:33%;
-        line-height:34px;
-        text-align:center;
-        font-size:18px;
-    }
+    margin-top:17px;
+    background-position:20% center;
+    background-size:contain;
+    height:30px;
+    width:33%;
+    line-height:34px;
+    text-align:center;
+    font-size:18px;
+}
     
-    .macBook {
+.macBook {
         
-        width:340px;
-        height:320px;
-        position:relative;
-        background-image: none;
-    }
+    width:340px;
+    height:320px;
+    position:relative;
+    background-image: none;
+}
     
-    .macScreen {
+.macScreen {
         
-        width:0px;
-        height:0px;
-        bottom:39px;
-        right:70px;
-        overflow:hidden;
-    }
+    width:0px;
+    height:0px;
+    bottom:39px;
+    right:70px;
+    overflow:hidden;
+}
     
-    .macScreenBack {
+.macScreenBack {
         
-        width:0px;
-        height:0px;
-        overflow:hidden;
-        background-image: none;
-    }
+    width:0px;
+    height:0px;
+    overflow:hidden;
+    background-image: none;
+}
     
-    .contentText {
-        
-        width:300px;
-        margin-left:30px;
-    }
+.contentText {
     
-    .phone {
-        
-        width:200px;
-        height:400px;
-        bottom:-20px;
-        top: 50%;
-        transform: translateY(-50%);
-        right:40px;
-    }
+    width:300px;
+    margin-left:30px;
+}
     
-    .phoneBack {
+.phone {
         
-        width:172px;height:300px;
-        background-image: none;
-        position:relative;
-        background-size:cover;
-        margin:auto;
-        margin-top:54px;
-        border-radius:1px;
-    }
+    width:200px;
+    height:400px;
+    bottom:-20px;
+    top: 50%;
+    transform: translateY(-50%);
+    right:40px;
+}
     
-    .footer {
+.phoneBack {
         
-        min-width:800px;
-        background-color: white;
-    }
+    width:172px;height:300px;
+    background-image: none;
+    position:relative;
+    background-size:cover;
+    margin:auto;
+    margin-top:54px;
+    border-radius:1px;
+}
+    
+.footer {
+        
+    min-width:800px;
+    background-color: white;
+}
     
 }
+
+/********************************************************************/
+/*                         TABLET STYLE                             */
+/********************************************************************/
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 900px){
  
  
  
- #registerButton {
+#registerButton {
+    
      background-color: #FF6961;
      color:white;
      left:50%;
- }
+}
  
- #loginButton {
+#loginButton {
+    
      background-color: transparent;
      color:#FF6961;
      left:50%;
      margin-left:-280px;
- }
+}
  
-    .leftIconButton {
-        width:280px;
-        height:50px;
-        line-height:50px;
-        font-size:28px;
-        margin-top:20px;
-    }
+.leftIconButton {
+        
+    width:280px;
+    height:50px;
+    line-height:50px;
+    font-size:28px;
+    margin-top:20px;
+}
 
 
 .videWindowDiv {
@@ -648,204 +668,190 @@ video#bgvid {
     line-height:-20px;
 }
     
-    .mobileBack {
-        width:100%;
-        height:100vh;
-        z-index:-100;
-        position:fixed;
-        background-color:black;
-        background-image:url('/images/munich_7.jpg');
-        background-size:cover;
-        background-position: center center;
-    }
+.mobileBack {
     
-    .registerButton {
+    width:100%;
+    height:100vh;
+    z-index:-100;
+    position:fixed;
+    background-color:black;
+    background-image:url('/images/munich_7.jpg');
+    background-size:cover;
+    background-position: center center;
+}
+    
+.registerButton {
         
-        width:500px;
-        height:80px;
-        left:50%;
-        margin-left:-250px;
-        top:42%;
-        font-size:50px;
-        line-height:80px;
-        border-radius:10px;
-    }
+    width:500px;
+    height:80px;
+    left:50%;
+    margin-left:-250px;
+    top:42%;
+    font-size:50px;
+    line-height:80px;
+    border-radius:10px;
+}
     
-    .sloganDiv{
-        top: 36%;
-    }
+.sloganDiv{
     
-    .cityIcon {
+    top: 36%;
+}
+    
+.cityIcon {
         
-        border-width:2px;
-        line-height:60px;
-        border-radius:10px;
-        font-size:40px;
-        line-height:100px;
-    }
-    
-    #munich {
-        height:150px;
-        width:280px;
-        margin-left:-300px;
-    }
-    
-    #frankfurt {
-        height:150px;
-        width:280px;
-        margin-right:-300px;
-    }
-    
-    
-    .loginFormDiv {
-        
-        left:0;
-        background-color:rgba(0,0,0,0.7);
-        margin-left:0;
-        width:100%;
-        height:100vh;
-        overflow:scroll;
-        
-    }
-    
-    #loginFormDiv {
-        height:100vh;
-        width:100%;
-        top:0;
-        margin-top:0px;
-        left:0;
-    }
-    
-    #registerFormDiv {
-        height:100vh;
-        width:100%;
-        top:0;
-        margin-top:0px;
-        left:0;
-    }
-    
-    #OrderFormDiv {
-        height:100vh;
-        width:100%;
-        top:0;
-        margin-top:0px;
-        left:0;
-    }
-     
-    /*
-    .loginFormDiv {
-        
-        width:700px;
-        left:50%;
-        margin-left:-350px;
-        overflow:scroll;
-    }
-    
-    #loginFormDiv {
-        z-index:201;
-        height:360px;
-        top:50%;
-        margin-top:-160px;
-    }
-    
-    
-    #registerFormDiv {
-        z-index:201;
-        height:800px;
-        top:50%;
-        margin-top:-400px;
-    }
-    
-    #OrderFormDiv {
-        z-index:201;
-        height:560px;
-        top:50%;
-        margin-top:-280px;
-    }
-    */
-    
-    
-    .signUpButton {
-        
-        height:70px;
-        line-height:70px;
-        width:420px;
-        font-size:25px;
-        text-align:center;
-    }
-    
-    .contentDiv1 {
-        
-        height:1000px;
-    }
-    
-    #contentText_1 {
+    border-width:2px;
+    line-height:60px;
+    border-radius:10px;
+    font-size:40px;
+    line-height:100px;
+}
 
-        top:100px;
-        left:50%;
-        margin-left:-400px;
-    }
-    #contentText_2 {
+#munich {
+    
+    height:150px;
+    width:280px;
+    margin-left:-300px;
+}
+    
+#frankfurt {
         
-        top:100px;
-        left:50%;
-        margin-left:0px;
-    }
-    #contentText_3 {
+    height:150px;
+    width:280px;
+    margin-right:-300px;
+}
+    
+    
+.loginFormDiv {
+        
+    left:0;
+    background-color:rgba(0,0,0,0.7);
+    margin-left:0;
+    width:100%;
+    height:100vh;
+    overflow:scroll;
+}
+    
+#loginFormDiv {
+    
+    height:100vh;
+    width:100%;
+    top:0;
+    margin-top:0px;
+    left:0;
+}
+    
+#registerFormDiv {
+    
+    height:100vh;
+    width:100%;
+    top:0;
+    margin-top:0px;
+    left:0;
+}
+    
+#OrderFormDiv {
+    
+    height:100vh;
+    width:100%;
+    top:0;
+    margin-top:0px;
+    left:0;
+}
 
-        top:540px;
-        left:50%;
-        margin-left:-400px;
-    }
-    #contentText_4 {
+.signUpButton {
         
-        top:540px;
-        left:50%;
-        margin-left:0px;
-    }
+    height:70px;
+    line-height:70px;
+    width:420px;
+    font-size:25px;
+    text-align:center;
+}
     
-    .contentText {
-        width: 400px;
-        height: 350px;
-        position: absolute;
-    }
-    
-    .iCon {
+.contentDiv1 {
         
-        height: 180px;
-        width: 180px;
-        margin: auto;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
+    height:1000px;
+}
     
-    #socialContainer {
+#contentText_1 {
+
+    top:100px;
+    left:50%;
+    margin-left:-400px;
+}
+
+#contentText_2 {
         
-        width:721px;
-    }
-    
-    .socialIcon {
+    top:100px;
+    left:50%;
+    margin-left:0px;
+}
+
+#contentText_3 {
+
+    top:540px;
+    left:50%;
+    margin-left:-400px;
+}
+
+#contentText_4 {
         
-        width:150px; height:150px;
-        background-size:cover;
-        float:left;
-        margin:15px;
-        margin-top:50px;
-    }
+    top:540px;
+    left:50%;
+    margin-left:0px;
+}
     
-    .footer {
-        height:auto;
-    }
+.contentText {
+    
+    width: 400px;
+    height: 350px;
+    position: absolute;
+}
+    
+.iCon {
+        
+    height: 180px;
+    width: 180px;
+    margin: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+    
+#socialContainer {
+        
+    width:721px;
+}
+
+.socialIcon {
+        
+    width:150px; height:150px;
+    background-size:cover;
+    float:left;
+    margin:15px;
+    margin-top:50px;
+}
+    
+.footer {
+    
+    height:auto;
+}
  
 }
+
+
+/********************************************************************/
+/*                       SMARTPHONE STYLE                           */
+/********************************************************************/
 
 @media only screen and (min-device-width: 300px) and (max-device-width: 767px) {
 
 
 html {
+    
     height: 100vh;
 }
+
 body {
+    
     height:100vh;
 }
 
@@ -855,29 +861,30 @@ body {
 }
 
 #registerButton {
+    
     background-color: #FF6961;
     color:white;
     left:50%;
 }
 
 #loginButton {
+    
     background-color: transparent;
     color:#FF6961;
     left:3%;
 }
 
 .leftIconButton {
+    
     width:47%;
     height:100px;
     line-height:100px;
     font-size:50px;
     margin-top:20px;
 }
-.videWindowDiv {
-
-}
 
 .mobileBack {
+    
     width:100%;
     height:100vh;
     z-index:-100;
@@ -891,14 +898,14 @@ body {
 
 .registerButton {
  
- width:700px;
- height:160px;
- left:50%;
- margin-left:-350px;
- top:48%;
- font-size:74px;
- line-height:160px;
- border-radius:10px;
+    width:700px;
+    height:160px;
+    left:50%;
+    margin-left:-350px;
+    top:48%;
+    font-size:74px;
+    line-height:160px;
+    border-radius:10px;
 }
 
 .sloganDiv{
@@ -913,10 +920,7 @@ body {
     height:300px;
     left:50%;
     margin-left:-350px;
-    /*
-    display: none;
-    visibility: hidden;
-    */
+    
 }
 
 .signUpButton {
@@ -938,12 +942,14 @@ body {
 }
 
 #munich {
+    
     height:200px;
     width:360px;
     margin-left:-380px;
 }
 
 #frankfurt {
+    
     height:200px;
     width:360px;
     margin-right:-380px;
@@ -961,6 +967,7 @@ body {
 }
 
 #loginFormDiv {
+    
     height:100%;
     width:100%;
     top:0;
@@ -969,6 +976,7 @@ body {
 }
 
 #registerFormDiv {
+    
     height:100%;
     width:100%;
     top:0;
@@ -977,6 +985,7 @@ body {
 }
 
 #OrderFormDiv {
+    
     height:100%;
     width:100%;
     top:0;
@@ -990,6 +999,7 @@ body {
 }
 
 .detailsHeader {
+    
     display: none;
     visibility: hidden;
 }
@@ -1026,6 +1036,7 @@ body {
 }
 
 .contentText {
+    
     width: 400px;
     height: 350px;
     position: absolute;
@@ -1033,6 +1044,7 @@ body {
 }
 
 .detailText {
+    
     display: none;
     visibility: hidden;
 }
@@ -1060,6 +1072,7 @@ body {
 }
 
 .footer {
+    
     height:auto;
 }
 
