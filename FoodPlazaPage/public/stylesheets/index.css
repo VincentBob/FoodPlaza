@@ -1160,7 +1160,9 @@ body {
 }
 
 
-@media only screen and (min-device-width: 300px) and (max-device-width: 767px) and (orientation: landscape) {
+/* @media only screen and (min-device-width: 300px) and (max-device-width: 767px) and (orientation: landscape) { */
+    
+@media only screen and (min-device-width: 300px) and (max-device-width: 767px) and (min-aspect-ratio: 13/9) {
 
 
 .scrollWrapper {
