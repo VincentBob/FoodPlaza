@@ -8,13 +8,7 @@
     
         <div id="restaurantButton" class="advertisementButton" onClick="location.href='../restaurant'" style="color:white;margin-right:30px;">RESTAURANT</div>
         <div id="driverButton" class="advertisementButton" onClick="location.href='../driver'" style="color:white;">FAHRER</div>
-        
-        <!--
-        <div class="cityIcon" style="right:20px; background-image: url('/images/frankfurt_1.png'); height:70px; width:140px; bottom:8px; font-size:18px; line-height:50px; border-width:1px; border-radius:6px;">Frankfurt</div>
-        <div class="cityIcon" style="right:170px; background-image: url('/images/munich_1.png'); height:70px; width:140px; bottom:8px; font-size:18px; line-height:50px; border-width:1px; border-radius:6px;">München</div>
-         -->
-        
-        
+    
         <div class="mainLogo"></div>
     
     <div class="leftIconButton" id="loginButton" onClick="loadFrom('loginFormDiv')">ANMELDEN</div>
@@ -45,10 +39,7 @@
 
 <div id="loginFormDiv" class="loginFormDiv">
     <div class="formElements">
-    <!--
-     <div class="loginFormText" style="top:40px;">e-Mail:</div>
-     <div class="loginFormText" style="top:70px;">Passwort:</div>
-     -->
+
     <form id="login" method="post" action="/login" name="login">
         <input type="email" name="email" id="email" placeholder="e-Mail" required="true" class="loginFormTextField" onFocus="resetFormPosition();"/>
         <input type="password" name="password" id="password" placeholder="Passwort" required="true" class="loginFormTextField"/>
@@ -61,18 +52,7 @@
 
 <div id="registerFormDiv" class="loginFormDiv">
     <div class="formElements">
-        <!--
-         <div class="loginFormText" style="top:30px;">Name:</div>
-         <div class="loginFormText" style="top:60px;">Nachname:</div>
-         <div class="loginFormText" style="top:90px;">e-Mail:</div>
-         <div class="loginFormText" style="top:120px;">Mobilnummer:</div>
-         <div class="loginFormText" style="top:150px;">Passwort:</div>
-         <div class="loginFormText" style="top:180px;">* Passwort:</div>
-         <div class="loginFormText" style="top:210px;">Straße:</div>
-         <div class="loginFormText" style="top:240px;">Hausnummer:</div>
-         <div class="loginFormText" style="top:270px;">Postleitzahl:</div>
-         <div class="loginFormText" style="top:300px;">Stadt:</div>
-         -->
+
     <form id="register" method="post" action="/signup" name="register">
         <p><input type="text" name="firstname" id="firstname" placeholder="Name" required="true" class="loginFormTextField"/></p>
         <p><input type="text" name="lastname" id="lastname" placeholder="Nachname" required="true" class="loginFormTextField"/></p>

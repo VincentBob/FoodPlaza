@@ -838,6 +838,78 @@ video#bgvid {
 }
 
 
+@media only screen and (min-device-width: 768px) and (max-device-width: 900px) and (orientation: landscape) {
+
+
+.scrollWrapper {
+     
+    height:100vh;
+}
+ 
+.mobileBack {
+
+    width:100vw;
+    height:100vh;
+}
+
+#loginButton {
+    
+    margin-left:-200px;
+}
+
+.leftIconButton {
+    
+    width:200px;
+    height:40px;
+    line-height:40px;
+    font-size:22px;
+    margin-top:24px;
+}
+
+.registerButton {
+    
+    width:360px;
+    height:60px;
+    left:50%;
+    margin-left:-180px;
+    top:50%;
+    font-size:40px;
+    line-height:60px;
+    border-radius:6px;
+}
+
+.sloganDiv{
+    
+    top: 36%;
+}
+
+.cityIcon {
+    
+    border-width:2px;
+    line-height:60px;
+    border-radius:6px;
+    font-size:35px;
+    line-height:70px;
+    bottom:30px;
+}
+
+#munich {
+    
+    height:100px;
+    width:200px;
+    margin-left:-210px;
+}
+
+#frankfurt {
+    
+    height:100px;
+    width:200px;
+    margin-right:-210px;
+}
+
+}
+
+
 /********************************************************************/
 /*                       SMARTPHONE STYLE                           */
 /********************************************************************/
