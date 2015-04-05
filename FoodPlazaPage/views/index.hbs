@@ -37,41 +37,40 @@
 </div>
 
 
-<div id="loginFormDiv" class="loginFormDiv">
-    <div class="formElements">
-
-    <form id="login" method="post" action="/login" name="login">
-        <input type="email" name="email" id="email" placeholder="e-Mail" required="true" class="loginFormTextField" onFocus="resetFormPosition();"/>
-        <input type="password" name="password" id="password" placeholder="Passwort" required="true" class="loginFormTextField"/>
-        <input class="loginEnterButton" type="submit" name="login" id="login" value="sign in"/>
-    <form/>
-    <div class="popUpCloseButton" onclick="unLoadForm('loginFormDiv');"></div>
-    </div>
-</div>
-
-
 <div id="registerFormDiv" class="loginFormDiv">
     <div class="formElements">
 
     <form id="register" method="post" action="/signup" name="register">
-        <p><input type="text" name="firstname" id="firstname" placeholder="Name" required="true" class="loginFormTextField"/></p>
-        <p><input type="text" name="lastname" id="lastname" placeholder="Nachname" required="true" class="loginFormTextField"/></p>
-        <p><input type="email" name="email" id="email" placeholder="e-Mail" required="true" class="loginFormTextField"/></p>
-        <p><input type="tel" name="mobile" id="mobile" placeholder="Mobilnummer" required="true" class="loginFormTextField"/></p>
-        <p><input type="password" onchange="if(this.checkValidity()) form.password_2.pattern = this.value;"  name="password" id="password" placeholder="Passwort" required="true" class="loginFormTextField"/></p>
-        <p><input type="password" name="password_2" id="password_2" title="Passwort Bestätigung stimmt nicht überein!" placeholder="* Passwort" required="true" class="loginFormTextField"/></p>
-        <p><input type="text" name="street" id="street" placeholder="Straße" required="true" class="loginFormTextField"/></p>
-        <p><input type="text" name="housenumber" id="housenumber" placeholder="Hausnummer" required="true" class="loginFormTextField"/></p>
-        <p><input type="number" name="postalcode" id="postalcode" placeholder="Postleitzahl" required="true" class="loginFormTextField"/></p>
-        <p><input type="text" name="city" id="city" placeholder="Stadt" required="true" class="loginFormTextField"/></p>
-        <p><input class="loginEnterButton" type="submit" name="signup" id="signup" value="Sign Up"/></p>
+        <input type="text" name="firstname" id="firstname" placeholder="Name" required="true" class="loginFormTextField"/>
+        <input type="text" name="lastname" id="lastname" placeholder="Nachname" required="true" class="loginFormTextField"/>
+        <input type="email" name="email" id="email" placeholder="e-Mail" required="true" class="loginFormTextField"/>
+        <input type="tel" name="mobile" id="mobile" placeholder="Mobilnummer" required="true" class="loginFormTextField"/>
+        <input type="password" onchange="if(this.checkValidity()) form.password_2.pattern = this.value;"  name="password" id="password" placeholder="Passwort" required="true" class="loginFormTextField"/>
+        <input type="password" name="password_2" id="password_2" title="Passwort Bestätigung stimmt nicht überein!" placeholder="* Passwort" required="true" class="loginFormTextField"/>
+        <input type="text" name="street" id="street" placeholder="Straße" required="true" class="loginFormTextField"/>
+        <input type="text" name="housenumber" id="housenumber" placeholder="Hausnummer" required="true" class="loginFormTextField"/>
+        <input type="number" name="postalcode" id="postalcode" placeholder="Postleitzahl" required="true" class="loginFormTextField"/>
+        <input type="text" name="city" id="city" placeholder="Stadt" required="true" class="loginFormTextField"/>
+        <input class="loginEnterButton" type="submit" name="signup" id="signup" value="Sign Up"/>
     </form>
     <div class="popUpCloseButton" onclick="unLoadForm('registerFormDiv');"></div>
+    
     </div>
 </div>
 
 
-
+ <div id="loginFormDiv" class="loginFormDiv">
+     <div class="formElements">
+ 
+        <form id="login" method="post" action="/login" name="login">
+            <input type="email" name="email" id="email" placeholder="e-Mail" required="true" class="loginFormTextField" onFocus="resetFormPosition();"/>
+            <input type="password" name="password" id="password" placeholder="Passwort" required="true" class="loginFormTextField"/>
+            <input class="loginEnterButton" type="submit" name="login" id="login" value="sign in"/>
+        <form/>
+        <div class="popUpCloseButton" onclick="unLoadForm('loginFormDiv');"></div>
+    </div>
+ </div>
+ 
 
 <div id="OrderFormDiv" class="loginFormDiv">
     <div class="formElements">
